@@ -13,7 +13,7 @@
 //    <a class="topcoat-button {{modifier}}">Button</a>
 
 .topcoat-button {
-    @extend .button
+    button-base()
     padding: var-padding;
     margin: var-margin;
     font-size: var-font-size;
@@ -45,7 +45,8 @@
 //    <a class="topcoat-button--quiet {{modifier}}">Button</a>
 
 .topcoat-button--quiet {
-    @extend .button--quiet
+    @extend .topcoat-button
+    button-base--quiet()
 }
 
 .topcoat-button--quiet:active,
