@@ -14,8 +14,8 @@ limitations under the License.
 */
 
 /*
- TopCoat Button
- --------------
+ Button
+ ------
 
  :active - Active state
 
@@ -77,8 +77,8 @@ limitations under the License.
   pointer-events: none;
 }
 /*
- TopCoat Quiet Button
- --------------------
+ Quiet Button
+ ------------
 
  :active - Quiet button active state
 
@@ -114,8 +114,8 @@ limitations under the License.
   pointer-events: none;
 }
 /*
- TopCoat Large Button
- --------------------
+ Large Button
+ ------------
 
  :active - Active state
 
@@ -141,8 +141,8 @@ limitations under the License.
   pointer-events: none;
 }
 /*
- TopCoat Large Quiet Button
- --------------------------
+ Large Quiet Button
+ ------------------
 
  :active - Active state
 
@@ -169,8 +169,8 @@ limitations under the License.
   pointer-events: none;
 }
 /*
- TopCoat Call To Action Button
- -----------------------------
+ Call To Action Button
+ ---------------------
 
  :active - Active state
 
@@ -209,8 +209,8 @@ limitations under the License.
   pointer-events: none;
 }
 /*
- TopCoat Large Call To Action Button
- --------------------
+ Large Call To Action Button
+ ---------------------------
 
  :active - Active state
 
