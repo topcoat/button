@@ -1,6 +1,6 @@
 {
   "name": "button",
-  "version": "0.0.0",
+  "version": "0.3.0",
   "description": "TopCoat default button skin",
   "main": "topcoat-button.css",
   "topcoat": {
