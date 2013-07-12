@@ -90,4 +90,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['clean', 'topcoat', 'build']);
     grunt.registerTask('build', ['compile', 'cssmin', 'jade', 'nodeunit']);
 
+    grunt.registerTask('test', ['nodeunit']);
+
 };

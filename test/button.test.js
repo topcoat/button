@@ -37,3 +37,18 @@ exports.styleguide = {
     test.done();
   }
 };
+
+exports.variableTest = {
+  setUp: function(done) {
+    // setup here if necessary
+    done();
+  },
+  stylus: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('release/css/topcoat-button.css');
+    test.equal(actual.match(/var-[a-z-]*[a-z]+/g), null, 'should not have missing vars');
+
+    test.done();
+  }
+};
