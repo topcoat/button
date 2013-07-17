@@ -23,6 +23,7 @@ var grunt = require('grunt'),
 
 describe('Topcoat button', function() {
     'use strict';
+
     it('should output correct css', function() {
         var actual = grunt.file.read('css/topcoat-button.css');
         var expected = grunt.file.read('test/expected/topcoat-button.css');
@@ -33,4 +34,6 @@ describe('Topcoat button', function() {
         var actual = grunt.file.read('css/topcoat-button.css');
         assert.equal(actual.match(/var-[a-z-]*[a-z]+/g), null, 'should not have missing vars');
     });
+
 });
+
