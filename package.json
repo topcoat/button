@@ -1,21 +1,14 @@
 {
-  "name": "button",
+  "name": "topcoat-button",
   "version": "0.3.0",
-  "description": "TopCoat default button skin",
-  "main": "topcoat-button.css",
-  "topcoat": {
-    "utils": {
-      "topcoat/utils": ""
-    },
-    "controls": {
-      "topcoat/button-base": ""
-    }
-  },
+  "description": "Topcoat default button skin",
+  "main": "index.html",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "prepublish": "grunt"
   },
   "repository": {
     "type": "git",
@@ -27,18 +20,20 @@
     "button",
     "adobe"
   ],
-  "author": "@ndreio Andrei Oprea",
+  "author": "@dam Kristofer Joseph",
   "license": "Apache",
   "devDependencies": {
-    "grunt-contrib-watch": "",
-    "grunt-contrib-nodeunit": "",
     "grunt": "~0.4.1",
     "grunt-contrib-stylus": "~0.5.0",
     "grunt-contrib-clean": "~0.4.1",
-    "grunt-zip": "~0.7.0",
     "grunt-contrib-cssmin": "~0.6.0",
-    "grunt-topcoat": "0.0.7",
     "grunt-contrib-jade": "~0.5.0",
-    "debug": "~0.7.2"
+    "grunt-simple-mocha": "~0.4.0",
+    "grunt-contrib-watch": "~0.4.4"
+  },
+  "dependencies": {
+    "topcoat-utils": "~0.1.0",
+    "topcoat-button-base": "~0.4.1",
+    "topcoat-theme": "~0.4.0"
   }
 }
