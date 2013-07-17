@@ -28,4 +28,9 @@ describe('Topcoat button', function() {
         var expected = grunt.file.read('test/expected/topcoat-button.css');
         assert.equal(actual, expected, 'should generate correct css');
     });
+
+    it('should not have any unrendered variables', function() {
+        var actual = grunt.file.read('css/topcoat-button.css');
+        assert.equal(actual.match(/var-[a-z-]*[a-z]+/g), null, 'should not have missing vars');
+    });
 });
