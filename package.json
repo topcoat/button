@@ -24,12 +24,14 @@
   "license": "Apache",
   "devDependencies": {
     "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.3.1",
     "grunt-contrib-stylus": "~0.5.0",
     "grunt-contrib-clean": "~0.4.1",
     "grunt-contrib-cssmin": "~0.6.0",
     "grunt-contrib-jade": "~0.5.0",
     "grunt-simple-mocha": "~0.4.0",
-    "grunt-contrib-watch": "~0.4.4"
+    "copy": "0.0.1",
+    "grunt-contrib-copy": "~0.4.1"
   },
   "dependencies": {
     "topcoat-utils": "~0.1.0",
