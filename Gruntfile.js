@@ -31,8 +31,8 @@ module.exports = function(grunt) {
         stylus: {
             mobilelight: {
                 options: {
-                    paths: ['node_modules/topcoat-button-base/src/mixins', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
-                    import: ['button-mixin', 'utils', 'theme-topcoat-mobile-light'],
+                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
+                    import: ['theme-topcoat-mobile-light'],
                     compress: false
                 },
 
@@ -44,8 +44,8 @@ module.exports = function(grunt) {
 
             mobiledark: {
                 options: {
-                    paths: ['node_modules/topcoat-button-base/src/mixins', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
-                    import: ['button-mixin', 'utils', 'theme-topcoat-mobile-dark'],
+                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
+                    import: ['theme-topcoat-mobile-dark'],
                     compress: false
                 },
 
@@ -57,8 +57,8 @@ module.exports = function(grunt) {
 
             desktoplight: {
                 options: {
-                    paths: ['node_modules/topcoat-button-base/src/mixins', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
-                    import: ['button-mixin', 'utils', 'theme-topcoat-desktop-light'],
+                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
+                    import: ['theme-topcoat-desktop-light'],
                     compress: false
                 },
 
@@ -70,8 +70,8 @@ module.exports = function(grunt) {
 
             desktopdark: {
                 options: {
-                    paths: ['node_modules/topcoat-button-base/src/mixins', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
-                    import: ['button-mixin', 'utils', 'theme-topcoat-desktop-dark'],
+                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
+                    import: ['theme-topcoat-desktop-dark'],
                     compress: false
                 },
 

@@ -15,9 +15,7 @@
 * limitations under the License.
 *
 */
-
-@import button-mixin
-@import utils
+@import button
 
 /*
  Button
@@ -31,13 +29,12 @@
 
  .is-disabled - Simulates a disabled state on mobile devices
 
-    <a class="topcoat-button">Button</a>
-    <a class="topcoat-button is-active">Button</a>
-    <a class="topcoat-button is-disabled">Button</a>
+    <button class="topcoat-button">Button</button>
+    <button class="topcoat-button is-active">Button</button>
+    <button class="topcoat-button is-disabled">Button</button>
 */
-
 .topcoat-button {
-    button-base()
+    @extend .button
     padding: var-padding;
     font-size: var-font-size;
     line-height: var-line-height;
@@ -59,7 +56,7 @@
 
 .topcoat-button:disabled,
 .topcoat-button.is-disabled {
-    disabled()
+  @extend .button--disabled
 }
 
 /*
@@ -74,14 +71,14 @@
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-button--quiet">Button</a>
-    <a class="topcoat-button--quiet is-active">Button</a>
-    <a class="topcoat-button--quiet is-disabled">Button</a>
+    <button class="topcoat-button--quiet">Button</button>
+    <button class="topcoat-button--quiet is-active">Button</button>
+    <button class="topcoat-button--quiet is-disabled">Button</button>
 */
 
 .topcoat-button--quiet {
     @extend .topcoat-button
-    button-base--quiet()
+    button--quiet()
 }
 
 .topcoat-button--quiet:active,
@@ -95,7 +92,7 @@
 
 .topcoat-button--quiet:disabled,
 .topcoat-button--quiet.is-disabled {
-    disabled()
+  @extend .button--disabled
 }
 
 /*
@@ -110,9 +107,9 @@
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-button--large" >Button</a>
-    <a class="topcoat-button--large is-active" >Button</a>
-    <a class="topcoat-button--large is-disabled" >Button</a>
+    <button class="topcoat-button--large" >Button</button>
+    <button class="topcoat-button--large is-active" >Button</button>
+    <button class="topcoat-button--large is-disabled" >Button</button>
 */
 
 .topcoat-button--large {
@@ -128,7 +125,7 @@
 
 .topcoat-button--large:disabled,
 .topcoat-button--large.is-disabled {
-    disabled()
+    @extend .button--disabled
 }
 
 /*
@@ -144,14 +141,14 @@
  .is-disabled - Simulates disabled state
 
 
-    <a class="topcoat-button--large--quiet" >Button</a>
-    <a class="topcoat-button--large--quiet is-active" >Button</a>
-    <a class="topcoat-button--large--quiet is-disabled" >Button</a>
+    <button class="topcoat-button--large--quiet" >Button</button>
+    <button class="topcoat-button--large--quiet is-active" >Button</button>
+    <button class="topcoat-button--large--quiet is-disabled" >Button</button>
 */
 
 .topcoat-button--large--quiet {
     @extend .topcoat-button--large
-    button-base--quiet()
+    button--quiet()
 }
 
 .topcoat-button--large--quiet:active,
@@ -161,7 +158,7 @@
 
 .topcoat-button--large--quiet:disabled,
 .topcoat-button--large--quiet.is-disabled {
-    disabled()
+  @extend .button--disabled
 }
 
 /*
@@ -177,31 +174,31 @@
  .is-disabled - Simulates disabled state
 
 
-    <a class="topcoat-button--cta" >Button</a>
-    <a class="topcoat-button--cta is-active" >Button</a>
-    <a class="topcoat-button--cta is-disabled" >Button</a>
+    <button class="topcoat-button--cta" >Button</button>
+    <button class="topcoat-button--cta is-active" >Button</button>
+    <button class="topcoat-button--cta is-disabled" >Button</button>
 
 */
 
 .topcoat-button--cta {
-    @extend .topcoat-button
-    border: var-border--cta;
-    background-color: var-background-color--cta;
-    box-shadow var-box-shadow--cta
-    color: var-color--cta;
-    font-weight: var-font-weight--cta;
-    text-shadow: var-text-shadow--cta;
+  @extend .topcoat-button
+  border: var-border--cta;
+  background-color: var-background-color--cta;
+  box-shadow var-box-shadow--cta
+  color: var-color--cta;
+  font-weight: var-font-weight--cta;
+  text-shadow: var-text-shadow--cta;
 }
 
 .topcoat-button--cta:active,
 .topcoat-button--cta.is-active {
-    background-color: var-background-color--cta--down;
-    box-shadow: var-box-shadow--cta--down;
+  background-color: var-background-color--cta--down;
+  box-shadow: var-box-shadow--cta--down;
 }
 
 .topcoat-button--cta:disabled,
 .topcoat-button--cta.is-disabled {
-    disabled()
+  @extend .button--disabled
 }
 
 /*
@@ -216,9 +213,9 @@
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-button--large--cta" >Button</a>
-    <a class="topcoat-button--large--cta is-active" >Button</a>
-    <a class="topcoat-button--large--cta is-disabled" >Button</a>
+    <button class="topcoat-button--large--cta" >Button</button>
+    <button class="topcoat-button--large--cta is-active" >Button</button>
+    <button class="topcoat-button--large--cta is-disabled" >Button</button>
 */
 
 .topcoat-button--large--cta {
@@ -234,5 +231,6 @@
 
 .topcoat-button--large-cta:disabled,
 .topcoat-button--large--cta.is-disabled {
-    disabled()
+  @extend .button--disabled
 }
+
