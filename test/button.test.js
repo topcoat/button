@@ -24,14 +24,49 @@ var grunt = require('grunt'),
 describe('Topcoat button', function() {
     'use strict';
 
-    it('should output correct css', function() {
-        var actual = grunt.file.read('css/topcoat-button.css');
-        var expected = grunt.file.read('test/expected/topcoat-button.css');
+    it('should output correct mobile light css', function() {
+        var actual = grunt.file.read('css/topcoat-button-mobile-light.css');
+        var expected = grunt.file.read('test/expected/topcoat-button-mobile-light.css');
         assert.equal(actual, expected, 'should generate correct css');
     });
 
-    it('should not have any unrendered variables', function() {
-        var actual = grunt.file.read('css/topcoat-button.css');
+    it('mobile light should not have any unrendered variables', function() {
+        var actual = grunt.file.read('css/topcoat-button-mobile-light.css');
+        assert.equal(actual.match(/var-[a-z-]*[a-z]+/g), null, 'should not have missing vars');
+    });
+
+
+    it('should output correct mobile dark css', function() {
+        var actual = grunt.file.read('css/topcoat-button-mobile-dark.css');
+        var expected = grunt.file.read('test/expected/topcoat-button-mobile-dark.css');
+        assert.equal(actual, expected, 'should generate correct css');
+    });
+
+    it('mobile dark should not have any unrendered variables', function() {
+        var actual = grunt.file.read('css/topcoat-button-mobile-dark.css');
+        assert.equal(actual.match(/var-[a-z-]*[a-z]+/g), null, 'should not have missing vars');
+    });
+
+    it('should output correct desktop dark css', function() {
+        var actual = grunt.file.read('css/topcoat-button-desktop-dark.css');
+        var expected = grunt.file.read('test/expected/topcoat-button-desktop-dark.css');
+        assert.equal(actual, expected, 'should generate correct css');
+    });
+
+    it('desktop dark should not have any unrendered variables', function() {
+        var actual = grunt.file.read('css/topcoat-button-desktop-dark.css');
+        assert.equal(actual.match(/var-[a-z-]*[a-z]+/g), null, 'should not have missing vars');
+    });
+
+
+    it('should output correct desktop light css', function() {
+        var actual = grunt.file.read('css/topcoat-button-desktop-light.css');
+        var expected = grunt.file.read('test/expected/topcoat-button-desktop-light.css');
+        assert.equal(actual, expected, 'should generate correct css');
+    });
+
+    it('desktop light should not have any unrendered variables', function() {
+        var actual = grunt.file.read('css/topcoat-button-desktop-light.css');
         assert.equal(actual.match(/var-[a-z-]*[a-z]+/g), null, 'should not have missing vars');
     });
 

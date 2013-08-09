@@ -15,8 +15,53 @@
 * limitations under the License.
 *
 */
-@import button
-
+.button,
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+}
+.button--quiet {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+.button--disabled,
+.topcoat-button:disabled,
+.topcoat-button.is-disabled,
+.topcoat-button--quiet:disabled,
+.topcoat-button--quiet.is-disabled,
+.topcoat-button--large:disabled,
+.topcoat-button--large.is-disabled,
+.topcoat-button--large--quiet:disabled,
+.topcoat-button--large--quiet.is-disabled,
+.topcoat-button--cta:disabled,
+.topcoat-button--cta.is-disabled,
+.topcoat-button--large-cta:disabled,
+.topcoat-button--large--cta.is-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
 /*
  Button
  ------
@@ -33,32 +78,31 @@
     <button class="topcoat-button is-active">Button</button>
     <button class="topcoat-button is-disabled">Button</button>
 */
-.topcoat-button {
-    @extend .button
-    padding: var-padding;
-    font-size: var-font-size;
-    line-height: var-line-height;
-    letter-spacing: var-letter-spacing;
-    color: var-color;
-    text-shadow: var-text-shadow;
-    vertical-align: var-vertical-align;
-    background-color: var-background-color;
-    box-shadow var-box-shadow
-    border: var-border;
-    border-radius: var-border-radius;
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  padding: 0 1.25rem;
+  font-size: 16px;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  color: #454545;
+  text-shadow: 0 1px #fff;
+  vertical-align: top;
+  background-color: #e5e9e8;
+  box-shadow: inset 0 1px #fff;
+  border: 1px solid #a5a8a8;
+  border-radius: 6px;
 }
-
 .topcoat-button:active,
-.topcoat-button.is-active {
-    background-color: var-background-color--down;
-    box-shadow: var-box-shadow--down;
+.topcoat-button.is-active,
+.topcoat-button--large:active,
+.topcoat-button--large.is-active {
+  background-color: #d3d7d7;
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-
-.topcoat-button:disabled,
-.topcoat-button.is-disabled {
-  @extend .button--disabled
-}
-
 /*
  Quiet Button
  ------------
@@ -75,26 +119,21 @@
     <button class="topcoat-button--quiet is-active">Button</button>
     <button class="topcoat-button--quiet is-disabled">Button</button>
 */
-
 .topcoat-button--quiet {
-    @extend .topcoat-button
-    button--quiet()
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
 }
-
 .topcoat-button--quiet:active,
-.topcoat-button--quiet.is-active {
-    color: var-color;
-    text-shadow: var-text-shadow;
-    background-color: var-background-color--down;
-    border: var-border;
-    box-shadow: var-box-shadow--down;
+.topcoat-button--quiet.is-active,
+.topcoat-button--large--quiet:active,
+.topcoat-button--large--quiet.is-active {
+  color: #454545;
+  text-shadow: 0 1px #fff;
+  background-color: #d3d7d7;
+  border: 1px solid #a5a8a8;
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-
-.topcoat-button--quiet:disabled,
-.topcoat-button--quiet.is-disabled {
-  @extend .button--disabled
-}
-
 /*
  Large Button
  ------------
@@ -111,23 +150,11 @@
     <button class="topcoat-button--large is-active" >Button</button>
     <button class="topcoat-button--large is-disabled" >Button</button>
 */
-
-.topcoat-button--large {
-    @extend .topcoat-button
-    font-size: var-font-size--large;
-    line-height: var-line-height--large;
+.topcoat-button--large,
+.topcoat-button--large--quiet {
+  font-size: 1.3rem;
+  line-height: 4rem;
 }
-
-.topcoat-button--large:active,
-.topcoat-button--large.is-active {
-    @extend .topcoat-button:active
-}
-
-.topcoat-button--large:disabled,
-.topcoat-button--large.is-disabled {
-    @extend .button--disabled
-}
-
 /*
  Large Quiet Button
  ------------------
@@ -145,22 +172,11 @@
     <button class="topcoat-button--large--quiet is-active" >Button</button>
     <button class="topcoat-button--large--quiet is-disabled" >Button</button>
 */
-
 .topcoat-button--large--quiet {
-    @extend .topcoat-button--large
-    button--quiet()
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
 }
-
-.topcoat-button--large--quiet:active,
-.topcoat-button--large--quiet.is-active {
-    @extend .topcoat-button--quiet:active
-}
-
-.topcoat-button--large--quiet:disabled,
-.topcoat-button--large--quiet.is-disabled {
-  @extend .button--disabled
-}
-
 /*
  Call To Action Button
  ---------------------
@@ -179,28 +195,22 @@
     <button class="topcoat-button--cta is-disabled" >Button</button>
 
 */
-
-.topcoat-button--cta {
-  @extend .topcoat-button
-  border: var-border--cta;
-  background-color: var-background-color--cta;
-  box-shadow var-box-shadow--cta
-  color: var-color--cta;
-  font-weight: var-font-weight--cta;
-  text-shadow: var-text-shadow--cta;
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  border: 1px solid #143250;
+  background-color: #288edf;
+  box-shadow: inset 0 1px rgba(255,255,255,0.36);
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0 -1px rgba(0,0,0,0.36);
 }
-
 .topcoat-button--cta:active,
-.topcoat-button--cta.is-active {
-  background-color: var-background-color--cta--down;
-  box-shadow: var-box-shadow--cta--down;
+.topcoat-button--cta.is-active,
+.topcoat-button--large--cta:active,
+.topcoat-button--large--cta.is-active {
+  background-color: #0380e8;
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-
-.topcoat-button--cta:disabled,
-.topcoat-button--cta.is-disabled {
-  @extend .button--disabled
-}
-
 /*
  Large Call To Action Button
  ---------------------------
@@ -217,20 +227,7 @@
     <button class="topcoat-button--large--cta is-active" >Button</button>
     <button class="topcoat-button--large--cta is-disabled" >Button</button>
 */
-
 .topcoat-button--large--cta {
-    @extend .topcoat-button--cta
-    font-size: var-font-size--large;
-    line-height: var-line-height--large;
+  font-size: 1.3rem;
+  line-height: 4rem;
 }
-
-.topcoat-button--large--cta:active,
-.topcoat-button--large--cta.is-active {
-    @extend .topcoat-button--cta:active
-}
-
-.topcoat-button--large-cta:disabled,
-.topcoat-button--large--cta.is-disabled {
-  @extend .button--disabled
-}
-
