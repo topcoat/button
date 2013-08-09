@@ -77,7 +77,7 @@ module.exports = function(grunt) {
 
                 files: [{
                     src: 'src/topcoat-button.styl',
-                    dest: 'css/topcoat-button-dekstop-dark.css'
+                    dest: 'css/topcoat-button-desktop-dark.css'
                 }]
             }
         },
@@ -154,7 +154,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-topdoc');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'build', 'release']);
+    grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
     grunt.registerTask('build', ['stylus', 'jade']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('release', ['cssmin', 'copy', 'topdoc']);

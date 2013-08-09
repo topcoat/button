@@ -15,22 +15,7 @@
 * limitations under the License.
 *
 */
-/*
- Button
- ------
-
- :active - Active state
-
- .is-active - Simulates an active state on mobile devices
-
- :disabled - Disabled state
-
- .is-disabled - Simulates a disabled state on mobile devices
-
-    <a class="topcoat-button">Button</a>
-    <a class="topcoat-button is-active">Button</a>
-    <a class="topcoat-button is-disabled">Button</a>
-*/
+.button,
 .topcoat-button,
 .topcoat-button--quiet,
 .topcoat-button--large,
@@ -54,30 +39,69 @@
   white-space: nowrap;
   overflow: hidden;
   text-decoration: none;
-  padding: 0 1.25rem;
-  font-size: 16px;
-  line-height: 3rem;
+}
+.button--quiet {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+.button--disabled,
+.topcoat-button:disabled,
+.topcoat-button.is-disabled,
+.topcoat-button--quiet:disabled,
+.topcoat-button--quiet.is-disabled,
+.topcoat-button--large:disabled,
+.topcoat-button--large.is-disabled,
+.topcoat-button--large--quiet:disabled,
+.topcoat-button--large--quiet.is-disabled,
+.topcoat-button--cta:disabled,
+.topcoat-button--cta.is-disabled,
+.topcoat-button--large-cta:disabled,
+.topcoat-button--large--cta.is-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+/*
+ Button
+ ------
+
+ :active - Active state
+
+ .is-active - Simulates an active state on mobile devices
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates a disabled state on mobile devices
+
+    <button class="topcoat-button">Button</button>
+    <button class="topcoat-button is-active">Button</button>
+    <button class="topcoat-button is-disabled">Button</button>
+*/
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  padding: 0 1.16rem;
+  font-size: 12px;
+  line-height: 2rem;
   letter-spacing: 1px;
-  color: #454545;
-  text-shadow: 0 1px #fff;
+  color: #c6c8c8;
+  text-shadow: 0 -1px rgba(0,0,0,0.69);
   vertical-align: top;
-  background-color: #e5e9e8;
-  box-shadow: inset 0 1px #fff;
-  border: 1px solid #a5a8a8;
-  border-radius: 6px;
+  background-color: #595b5b;
+  box-shadow: inset 0 1px rgba(255,255,255,0.12);
+  border: 1px solid rgba(0,0,0,0.36);
+  border-radius: 3px;
 }
 .topcoat-button:active,
 .topcoat-button.is-active,
 .topcoat-button--large:active,
 .topcoat-button--large.is-active {
-  background-color: #d3d7d7;
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
-}
-.topcoat-button:disabled,
-.topcoat-button.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
+  background-color: #404141;
+  box-shadow: inset 0 1px rgba(0,0,0,0.18);
 }
 /*
  Quiet Button
@@ -91,9 +115,9 @@
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-button--quiet">Button</a>
-    <a class="topcoat-button--quiet is-active">Button</a>
-    <a class="topcoat-button--quiet is-disabled">Button</a>
+    <button class="topcoat-button--quiet">Button</button>
+    <button class="topcoat-button--quiet is-active">Button</button>
+    <button class="topcoat-button--quiet is-disabled">Button</button>
 */
 .topcoat-button--quiet {
   background: transparent;
@@ -104,17 +128,11 @@
 .topcoat-button--quiet.is-active,
 .topcoat-button--large--quiet:active,
 .topcoat-button--large--quiet.is-active {
-  color: #454545;
-  text-shadow: 0 1px #fff;
-  background-color: #d3d7d7;
-  border: 1px solid #a5a8a8;
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
-}
-.topcoat-button--quiet:disabled,
-.topcoat-button--quiet.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
+  color: #c6c8c8;
+  text-shadow: 0 -1px rgba(0,0,0,0.69);
+  background-color: #404141;
+  border: 1px solid rgba(0,0,0,0.36);
+  box-shadow: inset 0 1px rgba(0,0,0,0.18);
 }
 /*
  Large Button
@@ -128,20 +146,14 @@
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-button--large" >Button</a>
-    <a class="topcoat-button--large is-active" >Button</a>
-    <a class="topcoat-button--large is-disabled" >Button</a>
+    <button class="topcoat-button--large" >Button</button>
+    <button class="topcoat-button--large is-active" >Button</button>
+    <button class="topcoat-button--large is-disabled" >Button</button>
 */
 .topcoat-button--large,
 .topcoat-button--large--quiet {
-  font-size: 1.3rem;
-  line-height: 4rem;
-}
-.topcoat-button--large:disabled,
-.topcoat-button--large.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
+  font-size: 1.167rem;
+  line-height: 2.6rem;
 }
 /*
  Large Quiet Button
@@ -156,20 +168,14 @@
  .is-disabled - Simulates disabled state
 
 
-    <a class="topcoat-button--large--quiet" >Button</a>
-    <a class="topcoat-button--large--quiet is-active" >Button</a>
-    <a class="topcoat-button--large--quiet is-disabled" >Button</a>
+    <button class="topcoat-button--large--quiet" >Button</button>
+    <button class="topcoat-button--large--quiet is-active" >Button</button>
+    <button class="topcoat-button--large--quiet is-disabled" >Button</button>
 */
 .topcoat-button--large--quiet {
   background: transparent;
   border: 1px solid transparent;
   box-shadow: none;
-}
-.topcoat-button--large--quiet:disabled,
-.topcoat-button--large--quiet.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
 }
 /*
  Call To Action Button
@@ -184,9 +190,9 @@
  .is-disabled - Simulates disabled state
 
 
-    <a class="topcoat-button--cta" >Button</a>
-    <a class="topcoat-button--cta is-active" >Button</a>
-    <a class="topcoat-button--cta is-disabled" >Button</a>
+    <button class="topcoat-button--cta" >Button</button>
+    <button class="topcoat-button--cta is-active" >Button</button>
+    <button class="topcoat-button--cta is-disabled" >Button</button>
 
 */
 .topcoat-button--cta,
@@ -202,14 +208,8 @@
 .topcoat-button--cta.is-active,
 .topcoat-button--large--cta:active,
 .topcoat-button--large--cta.is-active {
-  background-color: #0380e8;
+  background-color: #1976c3;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
-}
-.topcoat-button--cta:disabled,
-.topcoat-button--cta.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
 }
 /*
  Large Call To Action Button
@@ -223,17 +223,11 @@
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-button--large--cta" >Button</a>
-    <a class="topcoat-button--large--cta is-active" >Button</a>
-    <a class="topcoat-button--large--cta is-disabled" >Button</a>
+    <button class="topcoat-button--large--cta" >Button</button>
+    <button class="topcoat-button--large--cta is-active" >Button</button>
+    <button class="topcoat-button--large--cta is-disabled" >Button</button>
 */
 .topcoat-button--large--cta {
-  font-size: 1.3rem;
-  line-height: 4rem;
-}
-.topcoat-button--large-cta:disabled,
-.topcoat-button--large--cta.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
+  font-size: 1.167rem;
+  line-height: 2.6rem;
 }
