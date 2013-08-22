@@ -16,22 +16,25 @@
 *
 */
 @import button
-
-/*
- Button
- ------
-
- :active - Active state
-
- .is-active - Simulates an active state on mobile devices
-
- :disabled - Disabled state
-
- .is-disabled - Simulates a disabled state on mobile devices
-
+/* topdoc
+  name: Button
+  description: A simple button
+  modifiers:
+    :active: Active state
+    .is-active: Simulates an active state on mobile devices
+    :disabled: Disabled state
+    .is-disabled: Simulates a disabled state on mobile devices
+  markup:
     <button class="topcoat-button">Button</button>
     <button class="topcoat-button is-active">Button</button>
     <button class="topcoat-button is-disabled">Button</button>
+  examples:
+    mobile button: http://codepen.io/Topcoat/pen/DpKtf
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
 */
 .topcoat-button {
     @extend .button
@@ -58,24 +61,25 @@
 .topcoat-button.is-disabled {
   @extend .button--disabled
 }
-
-/*
- Quiet Button
- ------------
-
- :active - Quiet button active state
-
- .is-active - Simulates active state for a quiet button on touch interfaces
-
- :disabled - Disabled state
-
- .is-disabled - Simulates disabled state
-
-    <button class="topcoat-button--quiet">Button</button>
-    <button class="topcoat-button--quiet is-active">Button</button>
-    <button class="topcoat-button--quiet is-disabled">Button</button>
+/* topdoc
+  name: Quiet Button
+  description: A simple, yet quiet button
+  modifiers:
+    :active: Quiet button active state
+    .is-active: Simulates active state for a quiet button on touch interfaces
+    :disabled: Disabled state
+    .is-disabled: Simulates disabled state
+  markup:
+    <a class="topcoat-button--quiet">Button</a>
+    <a class="topcoat-button--quiet is-active">Button</a>
+    <a class="topcoat-button--quiet is-disabled">Button</a>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - quiet
 */
-
 .topcoat-button--quiet {
     @extend .topcoat-button
     button--quiet()
@@ -94,24 +98,25 @@
 .topcoat-button--quiet.is-disabled {
   @extend .button--disabled
 }
-
-/*
- Large Button
- ------------
-
- :active - Active state
-
- .is-active - Simulates active state touch interfaces
-
- :disabled - Disabled state
-
- .is-disabled - Simulates disabled state
-
-    <button class="topcoat-button--large" >Button</button>
-    <button class="topcoat-button--large is-active" >Button</button>
-    <button class="topcoat-button--large is-disabled" >Button</button>
+/* topdoc
+  name: Large Button
+  description: A big ol button
+  modifiers:
+    :active: Active state
+    .is-active: Simulates active state touch interfaces
+    :disabled: Disabled state
+    .is-disabled: Simulates disabled state
+  markup:
+    <a class="topcoat-button--large" >Button</a>
+    <a class="topcoat-button--large is-active" >Button</a>
+    <a class="topcoat-button--large is-disabled" >Button</a>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - large
 */
-
 .topcoat-button--large {
     @extend .topcoat-button
     font-size: var-font-size--large;
@@ -127,25 +132,26 @@
 .topcoat-button--large.is-disabled {
     @extend .button--disabled
 }
-
-/*
- Large Quiet Button
- ------------------
-
- :active - Active state
-
- .is-pressed - Simulates active state on touch interfaces
-
- :disabled - Disabled state
-
- .is-disabled - Simulates disabled state
-
-
-    <button class="topcoat-button--large--quiet" >Button</button>
-    <button class="topcoat-button--large--quiet is-active" >Button</button>
-    <button class="topcoat-button--large--quiet is-disabled" >Button</button>
+/* topdoc
+  name: Large Quiet Button
+  description: A large, yet quiet button
+  modifiers:
+    :active: Active state
+    .is-active: Simulates active state touch interfaces
+    :disabled: Disabled state
+    .is-disabled: Simulates disabled state
+  markup:
+    <a class="topcoat-button--large--quiet" >Button</a>
+    <a class="topcoat-button--large--quiet is-active" >Button</a>
+    <a class="topcoat-button--large--quiet is-disabled" >Button</a>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - large
+    - quiet
 */
-
 .topcoat-button--large--quiet {
     @extend .topcoat-button--large
     button--quiet()
@@ -160,26 +166,25 @@
 .topcoat-button--large--quiet.is-disabled {
   @extend .button--disabled
 }
-
-/*
- Call To Action Button
- ---------------------
-
- :active - Active state
-
- .is-pressed - Simulates active state on touch interfaces
-
- :disabled - Disabled state
-
- .is-disabled - Simulates disabled state
-
-
-    <button class="topcoat-button--cta" >Button</button>
-    <button class="topcoat-button--cta is-active" >Button</button>
-    <button class="topcoat-button--cta is-disabled" >Button</button>
-
+/* topdoc
+  name: Call To Action Button
+  description: A CALL TO ARMS, er, ACTION!
+  modifiers:
+    :active: Active state
+    .is-active: Simulates active state touch interfaces
+    :disabled: Disabled state
+    .is-disabled: Simulates disabled state
+  markup:
+    <a class="topcoat-button--cta" >Button</a>
+    <a class="topcoat-button--cta is-active" >Button</a>
+    <a class="topcoat-button--cta is-disabled" >Button</a>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - call to action
 */
-
 .topcoat-button--cta {
   @extend .topcoat-button
   border: var-border--cta;
@@ -200,24 +205,26 @@
 .topcoat-button--cta.is-disabled {
   @extend .button--disabled
 }
-
-/*
- Large Call To Action Button
- ---------------------------
-
- :active - Active state
-
- .is-active - Simulates active state touch interfaces
-
- :disabled - Disabled state
-
- .is-disabled - Simulates disabled state
-
-    <button class="topcoat-button--large--cta" >Button</button>
-    <button class="topcoat-button--large--cta is-active" >Button</button>
-    <button class="topcoat-button--large--cta is-disabled" >Button</button>
+/* topdoc
+  name: Large Call To Action Button
+  description: Like call to action, but bigger
+  modifiers:
+    :active: Active state
+    .is-active: Simulates active state touch interfaces
+    :disabled: Disabled state
+    .is-disabled: Simulates disabled state
+  markup:
+    <a class="topcoat-button--large--cta" >Button</a>
+    <a class="topcoat-button--large--cta is-active" >Button</a>
+    <a class="topcoat-button--large--cta is-disabled" >Button</a>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - large
+    - call to action
 */
-
 .topcoat-button--large--cta {
     @extend .topcoat-button--cta
     font-size: var-font-size--large;
