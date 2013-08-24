@@ -231,12 +231,22 @@ body.dark #content header:before {
 .showcode {
   margin: 10px 0;
 }
-.showcode a {
+.showcode a, section.examples a {
   color: #288edf;
   text-decoration: none;
 }
-.showcode a:hover {
+.showcode a:hover, section.examples a:hover {
   text-decoration: underline;
+}
+section.examples ul {
+  margin: 0 0 20px;
+  padding: 0 0 0 20px;
+}
+section.examples h4 {
+  margin-bottom: 5px;
+}
+section.examples li {
+  color: #58595A;
 }
 /* Side Nav */
 #sideNav {

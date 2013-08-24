@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Topcoat</title>
     <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
+    <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="../css/topcoat-button-desktop-light.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/brackets.css"><!--[if lt IE 9]>
@@ -57,13 +58,19 @@
             <header>
               <h2>Button</h2>
             </header>
-            <section class="component tada"><button class="topcoat-button">Button</button> <button class="topcoat-button is-active">Button</button> <button class="topcoat-button is-disabled">Button</button></section>
+            <section class="component"><button class="topcoat-button">Button</button></section>
+            <section class="examples">
+              <h4>Examples</h4>
+              <ul>
+                <li><a href="http://codepen.io/Topcoat/pen/DpKtf">mobile button</a></li>
+              </ul>
+            </section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html"></code></pre>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button&quot;&gt;Button&lt;/button&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -86,9 +93,7 @@
   border-radius: 3px;
 }
 .topcoat-button:active,
-.topcoat-button.is-active,
-.topcoat-button--large:active,
-.topcoat-button--large.is-active {
+.topcoat-button--large:active {
   background-color: #d3d7d7;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }</code></pre>
@@ -100,13 +105,13 @@
             <header>
               <h2>Quiet Button</h2>
             </header>
-            <section class="component tada"><a class="topcoat-button--quiet">Button</a> <a class="topcoat-button--quiet is-active">Button</a> <a class="topcoat-button--quiet is-disabled">Button</a></section>
+            <section class="component"><a class="topcoat-button--quiet">Button</a></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html"></code></pre>
+                  <pre class="html"><code data-language="html">&lt;a class=&quot;topcoat-button--quiet&quot;&gt;Button&lt;/a&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -116,9 +121,7 @@
   box-shadow: none;
 }
 .topcoat-button--quiet:active,
-.topcoat-button--quiet.is-active,
-.topcoat-button--large--quiet:active,
-.topcoat-button--large--quiet.is-active {
+.topcoat-button--large--quiet:active {
   color: #454545;
   text-shadow: 0 1px #fff;
   background-color: #d3d7d7;
@@ -133,13 +136,13 @@
             <header>
               <h2>Large Button</h2>
             </header>
-            <section class="component tada"><a class="topcoat-button--large" >Button</a> <a class="topcoat-button--large is-active" >Button</a> <a class="topcoat-button--large is-disabled" >Button</a></section>
+            <section class="component"><a class="topcoat-button--large" >Button</a></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html"></code></pre>
+                  <pre class="html"><code data-language="html">&lt;a class=&quot;topcoat-button--large&quot; &gt;Button&lt;/a&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -156,13 +159,13 @@
             <header>
               <h2>Large Quiet Button</h2>
             </header>
-            <section class="component tada"><a class="topcoat-button--large--quiet" >Button</a> <a class="topcoat-button--large--quiet is-active" >Button</a> <a class="topcoat-button--large--quiet is-disabled" >Button</a></section>
+            <section class="component"><a class="topcoat-button--large--quiet" >Button</a></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html"></code></pre>
+                  <pre class="html"><code data-language="html">&lt;a class=&quot;topcoat-button--large--quiet&quot; &gt;Button&lt;/a&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -179,13 +182,13 @@
             <header>
               <h2>Call To Action Button</h2>
             </header>
-            <section class="component tada"><a class="topcoat-button--cta" >Button</a> <a class="topcoat-button--cta is-active" >Button</a> <a class="topcoat-button--cta is-disabled" >Button</a></section>
+            <section class="component"><a class="topcoat-button--cta" >Button</a></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html"></code></pre>
+                  <pre class="html"><code data-language="html">&lt;a class=&quot;topcoat-button--cta&quot; &gt;Button&lt;/a&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -199,9 +202,7 @@
   text-shadow: 0 -1px rgba(0,0,0,0.36);
 }
 .topcoat-button--cta:active,
-.topcoat-button--cta.is-active,
-.topcoat-button--large--cta:active,
-.topcoat-button--large--cta.is-active {
+.topcoat-button--large--cta:active {
   background-color: #0380e8;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }</code></pre>
@@ -213,13 +214,13 @@
             <header>
               <h2>Large Call To Action Button</h2>
             </header>
-            <section class="component tada"><a class="topcoat-button--large--cta" >Button</a> <a class="topcoat-button--large--cta is-active" >Button</a> <a class="topcoat-button--large--cta is-disabled" >Button</a></section>
+            <section class="component"><a class="topcoat-button--large--cta" >Button</a></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html"></code></pre>
+                  <pre class="html"><code data-language="html">&lt;a class=&quot;topcoat-button--large--cta&quot; &gt;Button&lt;/a&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
