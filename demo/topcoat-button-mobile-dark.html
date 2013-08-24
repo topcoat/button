@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Topcoat</title>
     <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
-    <link rel="stylesheet" type="text/css" href="css/topcoat-button-mobile-dark.css">
+    <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../css/topcoat-button-mobile-dark.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/brackets.css">
-    <link rel="stylesheet" type="text/css" href="css/darkets.css"><!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/brackets.css"><!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   </head>
   <body class="dark">
@@ -18,9 +18,6 @@
           <nav class="site">
             <ul>
               <li><a href="http://topcoat.io">Home</a></li>
-              <li class="selected"><a href="http://topcoat.io/topcoat">Usage Guidelines</a></li>
-              <li><a href="http://bench.topcoat.io/">Benchmarks</a></li>
-              <li><a href="http://topcoat.io/blog">Blog</a></li>
             </ul>
           </nav>
           <div class="combo">
@@ -47,15 +44,11 @@
         <header id="main-header">
           <div class="max-width">
             <hgroup>
-              <h1>Topcoat</h1>
+              <h1><a href="http://topcoat.io">Topcoat</a></h1>
               <p>CSS for clean and fast web apps</p>
             </hgroup>
             <nav>
               <ul>
-                <li class="selected"><a href="http://topcoat.io/topcoat">Usage Guidelines</a></li>
-                <li><a href="http://bench.topcoat.io/">Benchmarks</a></li>
-                <li><a href="http://topcoat.io/blog">Blog</a></li>
-                <li><a id="download-btn" href="https://github.com/topcoat/topcoat/archive/v0.6.0.zip">Download version 0.6.0</a></li>
               </ul>
             </nav><a id="slide-menu-button" class="topcoat-icon-button--large--quiet"><span class="topcoat-icon--large topcoat-icon--menu-stack"></span></a>
           </div>
@@ -65,17 +58,19 @@
             <header>
               <h2>Button</h2>
             </header>
-            <section class="component"><button class="topcoat-button">Button</button>
-<button class="topcoat-button is-active">Button</button>
-<button class="topcoat-button is-disabled">Button</button></section>
+            <section class="component"><button class="topcoat-button">Button</button></section>
+            <section class="examples">
+              <h4>Examples</h4>
+              <ul>
+                <li><a href="http://codepen.io/Topcoat/pen/DpKtf">mobile button</a></li>
+              </ul>
+            </section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button&quot;&gt;Button&lt;/button&gt;
-&lt;button class=&quot;topcoat-button is-active&quot;&gt;Button&lt;/button&gt;
-&lt;button class=&quot;topcoat-button is-disabled&quot;&gt;Button&lt;/button&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button&quot;&gt;Button&lt;/button&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -98,9 +93,7 @@
   border-radius: 6px;
 }
 .topcoat-button:active,
-.topcoat-button.is-active,
-.topcoat-button--large:active,
-.topcoat-button--large.is-active {
+.topcoat-button--large:active {
   background-color: #404141;
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
 }</code></pre>
@@ -112,17 +105,13 @@
             <header>
               <h2>Quiet Button</h2>
             </header>
-            <section class="component"><button class="topcoat-button--quiet">Button</button>
-<button class="topcoat-button--quiet is-active">Button</button>
-<button class="topcoat-button--quiet is-disabled">Button</button></section>
+            <section class="component"><a class="topcoat-button--quiet">Button</a></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button--quiet&quot;&gt;Button&lt;/button&gt;
-&lt;button class=&quot;topcoat-button--quiet is-active&quot;&gt;Button&lt;/button&gt;
-&lt;button class=&quot;topcoat-button--quiet is-disabled&quot;&gt;Button&lt;/button&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;a class=&quot;topcoat-button--quiet&quot;&gt;Button&lt;/a&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -132,9 +121,7 @@
   box-shadow: none;
 }
 .topcoat-button--quiet:active,
-.topcoat-button--quiet.is-active,
-.topcoat-button--large--quiet:active,
-.topcoat-button--large--quiet.is-active {
+.topcoat-button--large--quiet:active {
   color: #c6c8c8;
   text-shadow: 0 -1px rgba(0,0,0,0.69);
   background-color: #404141;
@@ -149,17 +136,13 @@
             <header>
               <h2>Large Button</h2>
             </header>
-            <section class="component"><button class="topcoat-button--large" >Button</button>
-<button class="topcoat-button--large is-active" >Button</button>
-<button class="topcoat-button--large is-disabled" >Button</button></section>
+            <section class="component"><a class="topcoat-button--large" >Button</a></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button--large&quot; &gt;Button&lt;/button&gt;
-&lt;button class=&quot;topcoat-button--large is-active&quot; &gt;Button&lt;/button&gt;
-&lt;button class=&quot;topcoat-button--large is-disabled&quot; &gt;Button&lt;/button&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;a class=&quot;topcoat-button--large&quot; &gt;Button&lt;/a&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -176,17 +159,13 @@
             <header>
               <h2>Large Quiet Button</h2>
             </header>
-            <section class="component"><button class="topcoat-button--large--quiet" >Button</button>
-<button class="topcoat-button--large--quiet is-active" >Button</button>
-<button class="topcoat-button--large--quiet is-disabled" >Button</button></section>
+            <section class="component"><a class="topcoat-button--large--quiet" >Button</a></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button--large--quiet&quot; &gt;Button&lt;/button&gt;
-&lt;button class=&quot;topcoat-button--large--quiet is-active&quot; &gt;Button&lt;/button&gt;
-&lt;button class=&quot;topcoat-button--large--quiet is-disabled&quot; &gt;Button&lt;/button&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;a class=&quot;topcoat-button--large--quiet&quot; &gt;Button&lt;/a&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -203,17 +182,13 @@
             <header>
               <h2>Call To Action Button</h2>
             </header>
-            <section class="component"><button class="topcoat-button--cta" >Button</button>
-<button class="topcoat-button--cta is-active" >Button</button>
-<button class="topcoat-button--cta is-disabled" >Button</button></section>
+            <section class="component"><a class="topcoat-button--cta" >Button</a></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button--cta&quot; &gt;Button&lt;/button&gt;
-&lt;button class=&quot;topcoat-button--cta is-active&quot; &gt;Button&lt;/button&gt;
-&lt;button class=&quot;topcoat-button--cta is-disabled&quot; &gt;Button&lt;/button&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;a class=&quot;topcoat-button--cta&quot; &gt;Button&lt;/a&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -227,9 +202,7 @@
   text-shadow: 0 -1px rgba(0,0,0,0.36);
 }
 .topcoat-button--cta:active,
-.topcoat-button--cta.is-active,
-.topcoat-button--large--cta:active,
-.topcoat-button--large--cta.is-active {
+.topcoat-button--large--cta:active {
   background-color: #1976c3;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }</code></pre>
@@ -241,17 +214,13 @@
             <header>
               <h2>Large Call To Action Button</h2>
             </header>
-            <section class="component"><button class="topcoat-button--large--cta" >Button</button>
-<button class="topcoat-button--large--cta is-active" >Button</button>
-<button class="topcoat-button--large--cta is-disabled" >Button</button></section>
+            <section class="component"><a class="topcoat-button--large--cta" >Button</a></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button--large--cta&quot; &gt;Button&lt;/button&gt;
-&lt;button class=&quot;topcoat-button--large--cta is-active&quot; &gt;Button&lt;/button&gt;
-&lt;button class=&quot;topcoat-button--large--cta is-disabled&quot; &gt;Button&lt;/button&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;a class=&quot;topcoat-button--large--cta&quot; &gt;Button&lt;/a&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -268,7 +237,7 @@
         <footer></footer>
       </div>
     </div>
-    <script src="//use.edgefonts.net/source-sans-pro:n3,n4,n6;source-code-pro:n3.js"></script>
+    <script src="//use.edgefonts.net/source-sans-pro:n3,n4,n6;source-code-pro:n4.js"></script>
     <script src="js/rainbow-custom.min.js"></script>
     <script src="js/main.js"></script>
   </body>

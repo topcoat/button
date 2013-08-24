@@ -74,6 +74,13 @@ pre {
   letter-spacing: -.065em;
   line-height: 1.1em;
 }
+#main-header hgroup a {
+  color: #464646;
+  text-decoration: none;
+}
+#main-header hgroup a:hover {
+  color: #000;
+}
 #main-header hgroup p {
   font-size: 13px;
   color: #999;
@@ -175,10 +182,7 @@ pre {
   -moz-border-radius: 1px;
   -webkit-border-radius: 1px;
   border-radius: 1px;
-}
-body.dark #content section.code {
-  background: #404141;
-  border: 1px solid #58595A;
+  font-weight: 400;
 }
 article.component {
   padding: 0 0 10px;
@@ -188,9 +192,6 @@ article.component {
   font-size: 12px;
   color: #000;
   font-weight: 400;
-}
-body.dark #content section.code h3 {
-  color: #CCC
 }
 #content header h2 {
   font-weight: 300;
@@ -230,12 +231,22 @@ body.dark #content header:before {
 .showcode {
   margin: 10px 0;
 }
-.showcode a {
+.showcode a, section.examples a {
   color: #288edf;
   text-decoration: none;
 }
-.showcode a:hover {
+.showcode a:hover, section.examples a:hover {
   text-decoration: underline;
+}
+section.examples ul {
+  margin: 0 0 20px;
+  padding: 0 0 0 20px;
+}
+section.examples h4 {
+  margin-bottom: 5px;
+}
+section.examples li {
+  color: #58595A;
 }
 /* Side Nav */
 #sideNav {
