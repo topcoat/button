@@ -142,7 +142,7 @@
 .topcoat-button--large--quiet {
   font-size: 1.3rem;
   font-weight: 400;
-  line-height: 4rem;
+  line-height: 4.375rem;
   padding: 0 1.25rem;
 }
 /* topdoc
@@ -214,6 +214,6 @@
 .topcoat-button--large--cta {
   font-size: 1.3rem;
   font-weight: 400;
-  line-height: 4rem;
+  line-height: 4.375rem;
   padding: 0 1.25rem;
 }
