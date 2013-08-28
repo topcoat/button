@@ -88,27 +88,6 @@ module.exports = function(grunt) {
             }
         },
 
-        copy: {
-            release: {
-                files: [{
-                    expand: true,
-                    flatten: true,
-                    src: 'node_modules/topcoat-theme/img/hamburger_dark.svg',
-                    dest: 'img'
-                }]
-            }
-        },
-
-        jade: {
-            compile: {
-                expand: true,
-                cwd: 'test/perf',
-                src: ['*.jade'],
-                dest: 'test/perf/',
-                ext: '.test.html'
-            }
-        },
-
         simplemocha: {
             all: {
                 src: ['test/*.test.js']
@@ -134,8 +113,8 @@ module.exports = function(grunt) {
 
     // Default task.
     grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
-    grunt.registerTask('build', ['stylus', 'jade']);
+    grunt.registerTask('build', ['stylus']);
     grunt.registerTask('test', ['simplemocha']);
-    grunt.registerTask('release', ['cssmin', 'copy', 'topdoc']);
+    grunt.registerTask('release', ['cssmin', 'topdoc']);
 
 };
