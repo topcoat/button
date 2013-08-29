@@ -58,7 +58,7 @@
             <header>
               <h2>Button</h2>
             </header>
-            <section class="component"><button class="topcoat-button">Button</button></section>
+            <section class="component"><button class="topcoat-button">Button</button><button class="topcoat-button" disabled>Button</button></section>
             <section class="examples">
               <h4>Examples</h4>
               <ul>
@@ -70,7 +70,7 @@
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button&quot;&gt;Button&lt;/button&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button&quot;&gt;Button&lt;/button&gt;&lt;button class=&quot;topcoat-button&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -96,6 +96,9 @@
 .topcoat-button--large:active {
   background-color: #404141;
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
+}
+.topcoat-button:hover {
+  background-color: #646666;
 }</code></pre>
                 </div>
               </section>
