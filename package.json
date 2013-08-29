@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "topcoat-utils": "~0.1.0",
-    "topcoat-button-base": "~0.6.0",
-    "topcoat-theme": "~0.5.13"
+    "topcoat-button-base": "~0.6.1",
+    "topcoat-theme": "~0.5.14"
   }
 }
