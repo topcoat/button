@@ -23,9 +23,11 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-button">Button</button>
     <button class="topcoat-button" disabled>Button</button>
+    <button class="topcoat-button" autofocus>Button</button>
   examples:
     mobile button: http://codepen.io/Topcoat/pen/DpKtf
   tags:
@@ -61,6 +63,13 @@
 .topcoat-button:hover {
   background-color var-background-color--hover
 }
+
+.topcoat-button:focus {
+  border var-border--focus
+  box-shadow var-box-shadow--focus
+  outline 0
+}
+
 /* topdoc
   name: Quiet Button
   description: A simple, yet quiet button
@@ -68,6 +77,7 @@
     :active: Quiet button active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-button--quiet">Button</button>
     <button class="topcoat-button--quiet" disabled>Button</button>
@@ -92,14 +102,20 @@
 }
 
 .topcoat-button--quiet:disabled {
-  @extend .button--disabled
+  @extend .topcoat-button:disabled
 }
+
 .topcoat-button--quiet:hover {
-  background-color var-background-color--hover
+  @extend .topcoat-button:hover
   text-shadow: var-text-shadow;
   border: var-border;
   box-shadow: var-box-shadow;
 }
+
+.topcoat-button--quiet:focus {
+  @extend .topcoat-button:focus
+}
+
 /* topdoc
   name: Large Button
   description: A big ol button
@@ -107,6 +123,7 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-button--large" >Button</button>
     <button class="topcoat-button--large" disabled>Button</button>
@@ -130,11 +147,17 @@
 }
 
 .topcoat-button--large:disabled {
-    @extend .button--disabled
+    @extend .topcoat-button:disabled
 }
+
 .topcoat-button--large:hover {
-  background-color var-background-color--hover
+  @extend .topcoat-button:hover
 }
+
+.topcoat-button--large:focus {
+  @extend .topcoat-button:focus
+}
+
 /* topdoc
   name: Large Quiet Button
   description: A large, yet quiet button
@@ -142,6 +165,7 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-button--large--quiet" >Button</button>
     <button class="topcoat-button--large--quiet" disabled>Button</button>
@@ -166,11 +190,13 @@
   @extend .button--disabled
 }
 .topcoat-button--large--quiet:hover {
-  background-color var-background-color--hover
-  text-shadow: var-text-shadow;
-  border: var-border;
-  box-shadow: var-box-shadow;
+  @extend .topcoat-button--quiet:hover
 }
+
+.topcoat-button--large--quiet:focus {
+  @extend .topcoat-button:focus
+}
+
 /* topdoc
   name: Call To Action Button
   description: A CALL TO ARMS, er, ACTION!
@@ -178,6 +204,7 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-button--cta" >Button</button>
     <button class="topcoat-button--cta" disabled>Button</button>
@@ -204,11 +231,17 @@
 }
 
 .topcoat-button--cta:disabled {
-  @extend .button--disabled
+  @extend .topcoat-button:disabled
 }
+
 .topcoat-button--cta:hover {
   background-color var-background-color--cta--hover
 }
+
+.topcoat-button--cta:focus {
+  @extend .topcoat-button:focus
+}
+
 /* topdoc
   name: Large Call To Action Button
   description: Like call to action, but bigger
@@ -216,6 +249,7 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-button--large--cta" >Button</button>
     <button class="topcoat-button--large--cta" disabled>Button</button>
@@ -240,9 +274,14 @@
 }
 
 .topcoat-button--large--cta:disabled {
-  @extend .button--disabled
+  @extend .topcoat-button:disabled
 }
 
 .topcoat-button--large--cta:hover {
-  background-color var-background-color--cta--hover
+  @extend .topcoat-button--cta:hover
 }
+
+.topcoat-button--large--cta:focus {
+    @extend .topcoat-button:focus
+}
+
