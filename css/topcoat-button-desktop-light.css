@@ -93,16 +93,16 @@
   border: 1px solid #a5a8a8;
   border-radius: 4px;
 }
-.topcoat-button:active,
-.topcoat-button--large:active {
-  background-color: #d3d7d7;
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
-}
 .topcoat-button:hover,
 .topcoat-button--quiet:hover,
 .topcoat-button--large:hover,
 .topcoat-button--large--quiet:hover {
   background-color: #edf1f1;
+}
+.topcoat-button:active,
+.topcoat-button--large:active {
+  background-color: #d3d7d7;
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
 .topcoat-button:focus,
 .topcoat-button--quiet:focus,
@@ -137,6 +137,12 @@
   border: 1px solid transparent;
   box-shadow: none;
 }
+.topcoat-button--quiet:hover,
+.topcoat-button--large--quiet:hover {
+  text-shadow: 0 1px #fff;
+  border: 1px solid #a5a8a8;
+  box-shadow: inset 0 1px #fff;
+}
 .topcoat-button--quiet:active,
 .topcoat-button--large--quiet:active {
   color: #454545;
@@ -144,12 +150,6 @@
   background-color: #d3d7d7;
   border: 1px solid #a5a8a8;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
-}
-.topcoat-button--quiet:hover,
-.topcoat-button--large--quiet:hover {
-  text-shadow: 0 1px #fff;
-  border: 1px solid #a5a8a8;
-  box-shadow: inset 0 1px #fff;
 }
 /* topdoc
   name: Large Button

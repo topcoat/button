@@ -50,23 +50,23 @@
     border-radius: var-border-radius;
 }
 
+.topcoat-button:hover {
+  background-color var-background-color--hover
+}
+
 .topcoat-button:active {
     background-color: var-background-color--down;
     box-shadow: var-box-shadow--down;
-}
-
-.topcoat-button:disabled {
-  @extend .button--disabled
-}
-
-.topcoat-button:hover {
-  background-color var-background-color--hover
 }
 
 .topcoat-button:focus {
   border var-border--focus
   box-shadow var-box-shadow--focus
   outline 0
+}
+
+.topcoat-button:disabled {
+  @extend .button--disabled
 }
 
 /* topdoc
@@ -92,14 +92,6 @@
     button--quiet()
 }
 
-.topcoat-button--quiet:active {
-    color: var-color;
-    text-shadow: var-text-shadow;
-    background-color: var-background-color--down;
-    border: var-border;
-    box-shadow: var-box-shadow--down;
-}
-
 .topcoat-button--quiet:disabled {
   @extend .topcoat-button:disabled
 }
@@ -113,6 +105,14 @@
 
 .topcoat-button--quiet:focus {
   @extend .topcoat-button:focus
+}
+
+.topcoat-button--quiet:active {
+    color: var-color;
+    text-shadow: var-text-shadow;
+    background-color: var-background-color--down;
+    border: var-border;
+    box-shadow: var-box-shadow--down;
 }
 
 /* topdoc
