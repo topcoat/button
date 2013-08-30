@@ -224,6 +224,14 @@
   text-shadow: var-text-shadow--cta;
 }
 
+.topcoat-button--cta:hover {
+  background-color var-background-color--cta--hover
+}
+
+.topcoat-button--cta:focus {
+  @extend .topcoat-button:focus
+}
+
 .topcoat-button--cta:active {
   background-color: var-background-color--cta--down;
   box-shadow: var-box-shadow--cta--down;
@@ -231,14 +239,6 @@
 
 .topcoat-button--cta:disabled {
   @extend .topcoat-button:disabled
-}
-
-.topcoat-button--cta:hover {
-  background-color var-background-color--cta--hover
-}
-
-.topcoat-button--cta:focus {
-  @extend .topcoat-button:focus
 }
 
 /* topdoc
@@ -268,14 +268,6 @@
     padding: var-padding--large;
 }
 
-.topcoat-button--large--cta:active {
-    @extend .topcoat-button--cta:active
-}
-
-.topcoat-button--large--cta:disabled {
-  @extend .topcoat-button:disabled
-}
-
 .topcoat-button--large--cta:hover {
   @extend .topcoat-button--cta:hover
 }
@@ -284,3 +276,10 @@
     @extend .topcoat-button:focus
 }
 
+.topcoat-button--large--cta:active {
+    @extend .topcoat-button--cta:active
+}
+
+.topcoat-button--large--cta:disabled {
+  @extend .topcoat-button:disabled
+}
