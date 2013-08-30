@@ -63,6 +63,7 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-button">Button</button>
     <button class="topcoat-button" disabled>Button</button>
@@ -97,8 +98,21 @@
   background-color: #d3d7d7;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-button:hover {
+.topcoat-button:hover,
+.topcoat-button--quiet:hover,
+.topcoat-button--large:hover,
+.topcoat-button--large--quiet:hover {
   background-color: #edf1f1;
+}
+.topcoat-button:focus,
+.topcoat-button--quiet:focus,
+.topcoat-button--large:focus,
+.topcoat-button--large--quiet:focus,
+.topcoat-button--cta:focus,
+.topcoat-button--large--cta:focus {
+  border: 1px solid #0940fd;
+  box-shadow: 0 0 0 2px #6fb5f1;
+  outline: 0;
 }
 /* topdoc
   name: Quiet Button
@@ -107,6 +121,7 @@
     :active: Quiet button active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-button--quiet">Button</button>
     <button class="topcoat-button--quiet" disabled>Button</button>
@@ -130,8 +145,8 @@
   border: 1px solid #a5a8a8;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-button--quiet:hover {
-  background-color: #edf1f1;
+.topcoat-button--quiet:hover,
+.topcoat-button--large--quiet:hover {
   text-shadow: 0 1px #fff;
   border: 1px solid #a5a8a8;
   box-shadow: inset 0 1px #fff;
@@ -143,6 +158,7 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-button--large" >Button</button>
     <button class="topcoat-button--large" disabled>Button</button>
@@ -160,9 +176,6 @@
   line-height: 1.688rem;
   padding: 0 0.875rem;
 }
-.topcoat-button--large:hover {
-  background-color: #edf1f1;
-}
 /* topdoc
   name: Large Quiet Button
   description: A large, yet quiet button
@@ -170,6 +183,7 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-button--large--quiet" >Button</button>
     <button class="topcoat-button--large--quiet" disabled>Button</button>
@@ -186,12 +200,6 @@
   border: 1px solid transparent;
   box-shadow: none;
 }
-.topcoat-button--large--quiet:hover {
-  background-color: #edf1f1;
-  text-shadow: 0 1px #fff;
-  border: 1px solid #a5a8a8;
-  box-shadow: inset 0 1px #fff;
-}
 /* topdoc
   name: Call To Action Button
   description: A CALL TO ARMS, er, ACTION!
@@ -199,6 +207,7 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-button--cta" >Button</button>
     <button class="topcoat-button--cta" disabled>Button</button>
@@ -223,7 +232,8 @@
   background-color: #0380e8;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-button--cta:hover {
+.topcoat-button--cta:hover,
+.topcoat-button--large--cta:hover {
   background-color: #509bef;
 }
 /* topdoc
@@ -233,6 +243,7 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-button--large--cta" >Button</button>
     <button class="topcoat-button--large--cta" disabled>Button</button>
@@ -249,7 +260,4 @@
   font-weight: 600;
   line-height: 1.688rem;
   padding: 0 0.875rem;
-}
-.topcoat-button--large--cta:hover {
-  background-color: #509bef;
 }
