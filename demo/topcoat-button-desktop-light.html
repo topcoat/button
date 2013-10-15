@@ -89,29 +89,32 @@
   vertical-align: top;
   background-color: #e5e9e8;
   box-shadow: inset 0 1px #fff;
-  border: 1px solid #a5a8a8;
+  border: 1px solid #9daca9;
   border-radius: 4px;
 }
 .topcoat-button:hover,
 .topcoat-button--quiet:hover,
 .topcoat-button--large:hover,
 .topcoat-button--large--quiet:hover {
-  background-color: #edf1f1;
-}
-.topcoat-button:active,
-.topcoat-button--large:active {
-  background-color: #d3d7d7;
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  background-color: #eff1f1;
 }
 .topcoat-button:focus,
 .topcoat-button--quiet:focus,
+.topcoat-button--quiet:hover:focus,
 .topcoat-button--large:focus,
 .topcoat-button--large--quiet:focus,
+.topcoat-button--large--quiet:hover:focus,
 .topcoat-button--cta:focus,
 .topcoat-button--large--cta:focus {
-  border: 1px solid #0940fd;
-  box-shadow: 0 0 0 2px #6fb5f1;
+  border: 1px solid #0036ff;
+  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
+}
+.topcoat-button:active,
+.topcoat-button--large:active {
+  border: 1px solid #9daca9;
+  background-color: #d2d6d6;
+  box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }</code></pre>
                 </div>
               </section>
@@ -139,16 +142,18 @@
 .topcoat-button--quiet:hover,
 .topcoat-button--large--quiet:hover {
   text-shadow: 0 1px #fff;
-  border: 1px solid #a5a8a8;
+  border: 1px solid #9daca9;
   box-shadow: inset 0 1px #fff;
 }
 .topcoat-button--quiet:active,
-.topcoat-button--large--quiet:active {
+.topcoat-button--quiet:focus:active,
+.topcoat-button--large--quiet:active,
+.topcoat-button--large--quiet:focus:active {
   color: #454545;
   text-shadow: 0 1px #fff;
-  background-color: #d3d7d7;
-  border: 1px solid #a5a8a8;
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  background-color: #d2d6d6;
+  border: 1px solid #9daca9;
+  box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }</code></pre>
                 </div>
               </section>
@@ -218,7 +223,7 @@
                   <h3>CSS</h3>
                   <pre class="css"><code data-language="css">.topcoat-button--cta,
 .topcoat-button--large--cta {
-  border: 1px solid #143250;
+  border: 1px solid #134f7f;
   background-color: #288edf;
   box-shadow: inset 0 1px rgba(255,255,255,0.36);
   color: #fff;
@@ -227,11 +232,11 @@
 }
 .topcoat-button--cta:hover,
 .topcoat-button--large--cta:hover {
-  background-color: #509bef;
+  background-color: #4ca1e4;
 }
 .topcoat-button--cta:active,
 .topcoat-button--large--cta:active {
-  background-color: #0380e8;
+  background-color: #1e7dc8;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }</code></pre>
                 </div>

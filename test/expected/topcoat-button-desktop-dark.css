@@ -89,30 +89,33 @@
   text-shadow: 0 -1px rgba(0,0,0,0.69);
   vertical-align: top;
   background-color: #595b5b;
-  box-shadow: inset 0 1px #727373;
-  border: 1px solid #303233;
+  box-shadow: inset 0 1px #737373;
+  border: 1px solid #333434;
   border-radius: 4px;
 }
 .topcoat-button:hover,
 .topcoat-button--quiet:hover,
 .topcoat-button--large:hover,
 .topcoat-button--large--quiet:hover {
-  background-color: #646666;
-}
-.topcoat-button:active,
-.topcoat-button--large:active {
-  background-color: #404141;
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
+  background-color: #626465;
 }
 .topcoat-button:focus,
 .topcoat-button--quiet:focus,
+.topcoat-button--quiet:hover:focus,
 .topcoat-button--large:focus,
 .topcoat-button--large--quiet:focus,
+.topcoat-button--large--quiet:hover:focus,
 .topcoat-button--cta:focus,
 .topcoat-button--large--cta:focus {
-  border: 1px solid #0940fd;
-  box-shadow: 0 0 0 2px #6fb5f1;
+  border: 1px solid #0036ff;
+  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
+}
+.topcoat-button:active,
+.topcoat-button--large:active {
+  border: 1px solid #333434;
+  background-color: #3f4041;
+  box-shadow: inset 0 1px rgba(0,0,0,0.05);
 }
 /* topdoc
   name: Quiet Button
@@ -140,16 +143,18 @@
 .topcoat-button--quiet:hover,
 .topcoat-button--large--quiet:hover {
   text-shadow: 0 -1px rgba(0,0,0,0.69);
-  border: 1px solid #303233;
-  box-shadow: inset 0 1px #727373;
+  border: 1px solid #333434;
+  box-shadow: inset 0 1px #737373;
 }
 .topcoat-button--quiet:active,
-.topcoat-button--large--quiet:active {
+.topcoat-button--quiet:focus:active,
+.topcoat-button--large--quiet:active,
+.topcoat-button--large--quiet:focus:active {
   color: #c6c8c8;
   text-shadow: 0 -1px rgba(0,0,0,0.69);
-  background-color: #404141;
-  border: 1px solid #303233;
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
+  background-color: #3f4041;
+  border: 1px solid #333434;
+  box-shadow: inset 0 1px rgba(0,0,0,0.05);
 }
 /* topdoc
   name: Large Button
@@ -220,7 +225,7 @@
 */
 .topcoat-button--cta,
 .topcoat-button--large--cta {
-  border: 1px solid #143250;
+  border: 1px solid #134f7f;
   background-color: #288edf;
   box-shadow: inset 0 1px rgba(255,255,255,0.36);
   color: #fff;
@@ -229,11 +234,11 @@
 }
 .topcoat-button--cta:hover,
 .topcoat-button--large--cta:hover {
-  background-color: #509bef;
+  background-color: #4ca1e4;
 }
 .topcoat-button--cta:active,
 .topcoat-button--large--cta:active {
-  background-color: #1976c3;
+  background-color: #1e7dc8;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
 /* topdoc
