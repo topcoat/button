@@ -54,15 +54,16 @@
   background-color var-background-color--hover
 }
 
-.topcoat-button:active {
-    background-color: var-background-color--down;
-    box-shadow: var-box-shadow--down;
-}
-
 .topcoat-button:focus {
   border var-border--focus
-  box-shadow var-box-shadow--focus
+  box-shadow var-box-shadow--cta, var-box-shadow--focus
   outline 0
+}
+
+.topcoat-button:active {
+    border: var-border;
+    background-color: var-background-color--down;
+    box-shadow: var-box-shadow--down;
 }
 
 .topcoat-button:disabled {
@@ -103,11 +104,11 @@
   box-shadow: var-box-shadow;
 }
 
-.topcoat-button--quiet:focus {
+.topcoat-button--quiet:focus, .topcoat-button--quiet:hover:focus {
   @extend .topcoat-button:focus
 }
 
-.topcoat-button--quiet:active {
+.topcoat-button--quiet:active, .topcoat-button--quiet:focus:active {
     color: var-color;
     text-shadow: var-text-shadow;
     background-color: var-background-color--down;
@@ -141,10 +142,6 @@
     padding: var-padding--large;
 }
 
-.topcoat-button--large:active {
-    @extend .topcoat-button:active
-}
-
 .topcoat-button--large:disabled {
     @extend .topcoat-button:disabled
 }
@@ -155,6 +152,10 @@
 
 .topcoat-button--large:focus {
   @extend .topcoat-button:focus
+}
+
+.topcoat-button--large:active {
+    @extend .topcoat-button:active
 }
 
 /* topdoc
@@ -181,19 +182,20 @@
     button--quiet()
 }
 
-.topcoat-button--large--quiet:active {
-    @extend .topcoat-button--quiet:active
-}
-
 .topcoat-button--large--quiet:disabled {
   @extend .button--disabled
 }
+
 .topcoat-button--large--quiet:hover {
   @extend .topcoat-button--quiet:hover
 }
 
-.topcoat-button--large--quiet:focus {
+.topcoat-button--large--quiet:focus, .topcoat-button--large--quiet:hover:focus {
   @extend .topcoat-button:focus
+}
+
+.topcoat-button--large--quiet:active, .topcoat-button--large--quiet:focus:active {
+    @extend .topcoat-button--quiet:active
 }
 
 /* topdoc
@@ -224,6 +226,10 @@
   text-shadow: var-text-shadow--cta;
 }
 
+.topcoat-button--cta:disabled {
+  @extend .topcoat-button:disabled
+}
+
 .topcoat-button--cta:hover {
   background-color var-background-color--cta--hover
 }
@@ -235,10 +241,6 @@
 .topcoat-button--cta:active {
   background-color: var-background-color--cta--down;
   box-shadow: var-box-shadow--cta--down;
-}
-
-.topcoat-button--cta:disabled {
-  @extend .topcoat-button:disabled
 }
 
 /* topdoc
@@ -268,6 +270,10 @@
     padding: var-padding--large;
 }
 
+.topcoat-button--large--cta:disabled {
+  @extend .topcoat-button:disabled
+}
+
 .topcoat-button--large--cta:hover {
   @extend .topcoat-button--cta:hover
 }
@@ -278,8 +284,4 @@
 
 .topcoat-button--large--cta:active {
     @extend .topcoat-button--cta:active
-}
-
-.topcoat-button--large--cta:disabled {
-  @extend .topcoat-button:disabled
 }
