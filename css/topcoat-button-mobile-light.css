@@ -15,6 +15,7 @@
 * limitations under the License.
 *
 */
+
 .button,
 .topcoat-button,
 .topcoat-button--quiet,
@@ -25,7 +26,10 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   padding: 0;
   margin: 0;
@@ -34,17 +38,23 @@
   background: transparent;
   border: none;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   text-decoration: none;
 }
+
 .button--quiet {
   background: transparent;
   border: 1px solid transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 .button--disabled,
 .topcoat-button:disabled,
 .topcoat-button--quiet:disabled,
@@ -56,6 +66,7 @@
   cursor: default;
   pointer-events: none;
 }
+
 /* topdoc
   name: Button
   description: A simple button
@@ -75,6 +86,7 @@
     - mobile
     - button
 */
+
 .topcoat-button,
 .topcoat-button--quiet,
 .topcoat-button--large,
@@ -89,16 +101,19 @@
   text-shadow: 0 1px #fff;
   vertical-align: top;
   background-color: #e5e9e8;
+  -webkit-box-shadow: inset 0 1px #fff;
   box-shadow: inset 0 1px #fff;
   border: 1px solid #9daca9;
   border-radius: 6px;
 }
+
 .topcoat-button:hover,
 .topcoat-button--quiet:hover,
 .topcoat-button--large:hover,
 .topcoat-button--large--quiet:hover {
   background-color: #eff1f1;
 }
+
 .topcoat-button:focus,
 .topcoat-button--quiet:focus,
 .topcoat-button--quiet:hover:focus,
@@ -108,15 +123,19 @@
 .topcoat-button--cta:focus,
 .topcoat-button--large--cta:focus {
   border: 1px solid #0036ff;
+  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
 }
+
 .topcoat-button:active,
 .topcoat-button--large:active {
   border: 1px solid #9daca9;
   background-color: #d2d6d6;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.1);
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }
+
 /* topdoc
   name: Quiet Button
   description: A simple, yet quiet button
@@ -135,17 +154,22 @@
     - button
     - quiet
 */
+
 .topcoat-button--quiet {
   background: transparent;
   border: 1px solid transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 .topcoat-button--quiet:hover,
 .topcoat-button--large--quiet:hover {
   text-shadow: 0 1px #fff;
   border: 1px solid #9daca9;
+  -webkit-box-shadow: inset 0 1px #fff;
   box-shadow: inset 0 1px #fff;
 }
+
 .topcoat-button--quiet:active,
 .topcoat-button--quiet:focus:active,
 .topcoat-button--large--quiet:active,
@@ -154,8 +178,10 @@
   text-shadow: 0 1px #fff;
   background-color: #d2d6d6;
   border: 1px solid #9daca9;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.1);
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }
+
 /* topdoc
   name: Large Button
   description: A big ol button
@@ -174,6 +200,7 @@
     - button
     - large
 */
+
 .topcoat-button--large,
 .topcoat-button--large--quiet {
   font-size: 1.3rem;
@@ -181,6 +208,7 @@
   line-height: 4.375rem;
   padding: 0 1.25rem;
 }
+
 /* topdoc
   name: Large Quiet Button
   description: A large, yet quiet button
@@ -200,11 +228,14 @@
     - large
     - quiet
 */
+
 .topcoat-button--large--quiet {
   background: transparent;
   border: 1px solid transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 /* topdoc
   name: Call To Action Button
   description: A CALL TO ARMS, er, ACTION!
@@ -223,24 +254,30 @@
     - button
     - call to action
 */
+
 .topcoat-button--cta,
 .topcoat-button--large--cta {
   border: 1px solid #134f7f;
   background-color: #288edf;
+  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.36);
   box-shadow: inset 0 1px rgba(255,255,255,0.36);
   color: #fff;
   font-weight: 500;
   text-shadow: 0 -1px rgba(0,0,0,0.36);
 }
+
 .topcoat-button--cta:hover,
 .topcoat-button--large--cta:hover {
   background-color: #4ca1e4;
 }
+
 .topcoat-button--cta:active,
 .topcoat-button--large--cta:active {
   background-color: #1e7dc8;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
+
 /* topdoc
   name: Large Call To Action Button
   description: Like call to action, but bigger
@@ -260,6 +297,7 @@
     - large
     - call to action
 */
+
 .topcoat-button--large--cta {
   font-size: 1.3rem;
   font-weight: 400;
