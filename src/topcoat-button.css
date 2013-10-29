@@ -219,7 +219,7 @@
     extend: .topcoat-button;
     border: var(border--cta);
     background-color: var(background-color--cta);
-    box-shadow var(box-shadow--cta);
+    box-shadow: var(box-shadow--cta);
     color: var(color--cta);
     font-weight: var(font-weight--cta);
     text-shadow: var(text-shadow--cta);
