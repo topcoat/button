@@ -3,6 +3,7 @@
   "version": "0.5.3",
   "description": "Topcoat default button skin",
   "main": "index.html",
+  "style": "src/topcoat-button.css",
   "directories": {
     "test": "test"
   },
