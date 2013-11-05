@@ -33,9 +33,9 @@
     "grunt-topdoc": "~0.1.3",
     "topdoc-theme": "~0.2.6",
     "grunt-rework": "0.0.5"
-  },
+  }
   "dependencies": {
-    "topcoat-button": "git://github.com/topcoat/button.git#rework"
+    "topcoat-button": "git://github.com/topcoat/button.git#rework",
     "topcoat-theme": "git://github.com/topcoat/theme.git#rework"
   }
 }
