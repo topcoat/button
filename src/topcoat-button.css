@@ -15,7 +15,7 @@
 * limitations under the License.
 *
 */
-@import "button";
+@import "topcoat-button-base";
 /* topdoc
   name: Button
   description: A simple button
