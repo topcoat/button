@@ -78,6 +78,9 @@ module.exports = function(grunt) {
             }
         },
 
+        rework: {
+        },
+
         cssmin: {
             minify: {
                 expand: true,
@@ -90,7 +93,6 @@ module.exports = function(grunt) {
 
         simplemocha: {
             all: {
-                src: ['test/*.test.js']
             }
         },
 
@@ -108,9 +110,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-topdoc');
+    grunt.loadNpmTasks('grunt-rework');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
+    grunt.registerTask('default', ['clean', 'test', 'release']);
     grunt.registerTask('build', ['rework']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('release', ['cssmin', 'topdoc']);
