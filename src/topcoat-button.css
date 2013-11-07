@@ -234,8 +234,8 @@
 }
 
 .topcoat-button--cta:active {
-    background-color: var-background-color--cta--down;
-    box-shadow: var-box-shadow--cta--down;
+    background-color: var(background-color--cta--down);
+    box-shadow: var(box-shadow--cta--down);
 }
 
 .topcoat-button--cta:disabled {
