@@ -1,65 +1,24 @@
-/*global module:false*/
 module.exports = function(grunt) {
 
-
-    // Project configuration.
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
 
         clean: {
             release: ['css']
         },
 
-        stylus: {
-            mobilelight: {
-                options: {
-                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
-                    import: ['theme-topcoat-mobile-light'],
-                    compress: false
-                },
-
-                files: [{
-                    src: 'src/topcoat-button.styl',
-                    dest: 'css/topcoat-button-mobile-light.css'
-                }]
+        topcoat: {
+            options: {
+                browsers: ['last 2 versions']
             },
-
-            mobiledark: {
-                options: {
-                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
-                    import: ['theme-topcoat-mobile-dark'],
-                    compress: false
-                },
-
+            compile: {
                 files: [{
-                    src: 'src/topcoat-button.styl',
-                    dest: 'css/topcoat-button-mobile-dark.css'
-                }]
-            },
-
-            desktoplight: {
-                options: {
-                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
-                    import: ['theme-topcoat-desktop-light'],
-                    compress: false
-                },
-                files: [{
-                    src: 'src/topcoat-button.styl',
-                    dest: 'css/topcoat-button-desktop-light.css'
-                }]
-            },
-
-            desktopdark: {
-                options: {
-                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
-                    import: ['theme-topcoat-desktop-dark'],
-                    compress: false
-                },
-
-                files: [{
-                    src: 'src/topcoat-button.styl',
-                    dest: 'css/topcoat-button-desktop-dark.css'
-                }]
+                        expand: true,
+                        cwd: 'test/fixtures',
+                        src: ['*.css'],
+                        dest: 'css/',
+                        ext: '.css'
+                    }
+                ]
             }
         },
 
@@ -70,15 +29,12 @@ module.exports = function(grunt) {
                     destination: "demo",
                     template: "node_modules/topdoc-theme/",
                     templateData: {
-                      "title": "Topcoat",
-                      "subtitle": "CSS for clean and fast web apps",
-                      "homeURL": "http://topcoat.io"
+                        "title": "Topcoat",
+                        "subtitle": "CSS for clean and fast web apps",
+                        "homeURL": "http://topcoat.io"
                     }
                 }
             }
-        },
-
-        rework: {
         },
 
         cssmin: {
@@ -93,29 +49,22 @@ module.exports = function(grunt) {
 
         simplemocha: {
             all: {
+                src: ['test/*.test.js']
             }
-        },
-
-        watch: {
-            files: 'src/**/*.styl',
-            tasks: ['build', 'test']
         }
+
     });
 
-
-    // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-stylus');
-    grunt.loadNpmTasks('grunt-simple-mocha');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-topcoat');
     grunt.loadNpmTasks('grunt-topdoc');
-    grunt.loadNpmTasks('grunt-rework');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-simple-mocha');
 
-    // Default task.
-    grunt.registerTask('default', ['clean', 'test', 'release']);
-    grunt.registerTask('build', ['rework']);
+    grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
+    grunt.registerTask('build', ['topcoat']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('release', ['cssmin', 'topdoc']);
 
 };
+
