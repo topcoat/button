@@ -1,22 +1,89 @@
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
+@font-face {
+  font-family: "Source Sans";
+  src: url('../font/SourceSansPro-Regular.otf');
+}
 
-.button,
+@font-face {
+  font-family: "Source Sans";
+  src: url('../font/SourceSansPro-Light.otf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Source Sans";
+  src: url('../font/SourceSansPro-Semibold.otf');
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var-background--body;
+  color: #000;
+  font: 16px "Source Sans", helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+.topcoat-button--quiet,
+.topcoat-button--large--quiet {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .topcoat-button,
 .topcoat-button--quiet,
 .topcoat-button--large,
@@ -26,45 +93,39 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+}
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
   text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-decoration: none;
 }
 
-.button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.button--disabled,
 .topcoat-button:disabled,
 .topcoat-button--quiet:disabled,
 .topcoat-button--large:disabled,
+.topcoat-button--large:disabled,
 .topcoat-button--large--quiet:disabled,
 .topcoat-button--cta:disabled,
+.topcoat-button--cta:disabled,
+.topcoat-button--large--cta:disabled,
+.topcoat-button--large--cta:disabled,
 .topcoat-button--large--cta:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
+}
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  text-decoration: none;
 }
 
 /* topdoc
@@ -98,43 +159,55 @@
   font-weight: 400;
   line-height: 3rem;
   letter-spacing: 1px;
-  color: #c6c8c8;
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
+  color: hsla(180, 2%, 78%, 1);
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.69);
   vertical-align: top;
-  background-color: #595b5b;
-  -webkit-box-shadow: inset 0 1px #737373;
-  box-shadow: inset 0 1px #737373;
-  border: 1px solid #333434;
   border-radius: 6px;
+}
+
+.topcoat-button,
+.topcoat-button--large,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  background-color: hsla(180, 1%, 35%, 1);
+  box-shadow: inset 0 1px hsla(0, 0%, 45%, 1);
+  border: 1px solid hsla(180, 1%, 20%, 1);
 }
 
 .topcoat-button:hover,
 .topcoat-button--quiet:hover,
 .topcoat-button--large:hover,
-.topcoat-button--large--quiet:hover {
-  background-color: #626465;
+.topcoat-button--large:hover,
+.topcoat-button--large--quiet:hover,
+.topcoat-button--cta:hover,
+.topcoat-button--large--cta:hover,
+.topcoat-button--large--cta:hover {
+  background-color: hsla(200, 2%, 39%, 1);
+}
+
+.topcoat-button:active,
+.topcoat-button--large:active,
+.topcoat-button--large:active,
+.topcoat-button--cta:active,
+.topcoat-button--large--cta:active,
+.topcoat-button--large--cta:active {
+  background-color: hsla(210, 2%, 25%, 1);
+  box-shadow: inset 0 1px hsla(0, 0%, 0%, 0.05);
 }
 
 .topcoat-button:focus,
 .topcoat-button--quiet:focus,
-.topcoat-button--quiet:hover:focus,
+.topcoat-button--large:focus,
 .topcoat-button--large:focus,
 .topcoat-button--large--quiet:focus,
-.topcoat-button--large--quiet:hover:focus,
 .topcoat-button--cta:focus,
+.topcoat-button--cta:focus,
+.topcoat-button--large--cta:focus,
+.topcoat-button--large--cta:focus,
 .topcoat-button--large--cta:focus {
-  border: 1px solid #0036ff;
-  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  border: 1px solid hsla(227, 100%, 50%, 1);
+  box-shadow: 0 0 0 2px hsla(208, 82%, 69%, 1);
   outline: 0;
-}
-
-.topcoat-button:active,
-.topcoat-button--large:active {
-  border: 1px solid #333434;
-  background-color: #3f4041;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.05);
-  box-shadow: inset 0 1px rgba(0,0,0,0.05);
 }
 
 /* topdoc
@@ -156,31 +229,20 @@
     - quiet
 */
 
-.topcoat-button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
 .topcoat-button--quiet:hover,
 .topcoat-button--large--quiet:hover {
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
-  border: 1px solid #333434;
-  -webkit-box-shadow: inset 0 1px #737373;
-  box-shadow: inset 0 1px #737373;
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.69);
+  border: 1px solid hsla(180, 1%, 20%, 1);
+  box-shadow: inset 0 1px hsla(0, 0%, 45%, 1);
 }
 
 .topcoat-button--quiet:active,
-.topcoat-button--quiet:focus:active,
-.topcoat-button--large--quiet:active,
-.topcoat-button--large--quiet:focus:active {
-  color: #c6c8c8;
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
-  background-color: #3f4041;
-  border: 1px solid #333434;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.05);
-  box-shadow: inset 0 1px rgba(0,0,0,0.05);
+.topcoat-button--large--quiet:active {
+  color: hsla(180, 2%, 78%, 1);
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.69);
+  background-color: hsla(210, 2%, 25%, 1);
+  border: 1px solid hsla(180, 1%, 20%, 1);
+  box-shadow: inset 0 1px hsla(0, 0%, 0%, 0.05);
 }
 
 /* topdoc
@@ -230,13 +292,6 @@
     - quiet
 */
 
-.topcoat-button--large--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
 /* topdoc
   name: Call To Action Button
   description: A CALL TO ARMS, er, ACTION!
@@ -258,25 +313,25 @@
 
 .topcoat-button--cta,
 .topcoat-button--large--cta {
-  border: 1px solid #134f7f;
-  background-color: #288edf;
-  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.36);
-  box-shadow: inset 0 1px rgba(255,255,255,0.36);
-  color: #fff;
+  border: 1px solid hsla(207, 74%, 29%, 1);
+  background-color: hsla(207, 74%, 52%, 1);
+  box-shadow: inset 0 1px hsla(0, 100%, 100%, 0.36);
+  color: hsla(0, 100%, 100%, 1);
   font-weight: 500;
-  text-shadow: 0 -1px rgba(0,0,0,0.36);
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.36);
 }
 
 .topcoat-button--cta:hover,
+.topcoat-button--large--cta:hover,
 .topcoat-button--large--cta:hover {
-  background-color: #4ca1e4;
+  background-color: hsla(206, 74%, 60%, 1);
 }
 
 .topcoat-button--cta:active,
+.topcoat-button--large--cta:active,
 .topcoat-button--large--cta:active {
-  background-color: #1e7dc8;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  background-color: hsla(206, 74%, 45%, 1);
+  box-shadow: inset 0 1px hsla(0, 0%, 0%, 0.12);
 }
 
 /* topdoc
