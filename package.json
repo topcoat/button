@@ -1,6 +1,6 @@
 {
   "name": "topcoat-button",
-  "version": "0.5.3",
+  "version": "0.5.5",
   "description": "Topcoat default button skin",
   "main": "index.html",
   "style": "src/topcoat-button.css",
@@ -32,7 +32,8 @@
     "topcoat-theme-mobile-dark": "~0.1.5",
     "topcoat-theme-desktop-dark": "~0.1.4",
     "topcoat-theme-mobile-light": "~0.1.4",
-    "topcoat-theme-desktop-light": "~0.1.6"
+    "topcoat-theme-desktop-light": "~0.1.6",
+    "grunt-topcoat": "0.1.0"
   },
   "dependencies": {
     "topcoat-button-base": "~0.6.1"
