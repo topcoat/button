@@ -35,7 +35,7 @@
     - mobile
     - button
 */
-.topcoat-button {
+.button {
     extend: %button;
     padding: var(padding);
     font-size: var(font-size);
@@ -50,22 +50,22 @@
     border-radius: var(border-radius);
 }
 
-.topcoat-button:hover {
+.button:hover {
     background-color: var(background-color--hover);
 }
 
-.topcoat-button:active {
+.button:active {
     background-color: var(background-color--down);
     box-shadow: var(box-shadow--down);
 }
 
-.topcoat-button:focus {
+.button:focus {
     border: var(border--focus);
     box-shadow: var(box-shadow--focus);
     outline: 0;
 }
 
-.topcoat-button:disabled {
+.button:disabled {
     extend: %button--disabled;
 }
 
@@ -87,27 +87,27 @@
     - button
     - quiet
 */
-.topcoat-button--quiet {
-    extend: .topcoat-button;
+.button--quiet {
+    extend: .button;
     extend: %button--quiet;
 }
 
-.topcoat-button--quiet:disabled {
-    extend: .topcoat-button:disabled;
+.button--quiet:disabled {
+    extend: .button:disabled;
 }
 
-.topcoat-button--quiet:hover {
-  extend: .topcoat-button:hover;
+.button--quiet:hover {
+  extend: .button:hover;
   text-shadow: var(text-shadow);
   border: var(border);
   box-shadow: var(box-shadow);
 }
 
-.topcoat-button--quiet:focus {
-    extend: .topcoat-button:focus;
+.button--quiet:focus {
+    extend: .button:focus;
 }
 
-.topcoat-button--quiet:active {
+.button--quiet:active {
     color: var(color);
     text-shadow: var(text-shadow);
     background-color: var(background-color--down);
@@ -133,28 +133,28 @@
     - button
     - large
 */
-.topcoat-button--large {
-    extend: .topcoat-button;
+.button--large {
+    extend: .button;
     font-size: var(font-size--large);
     font-weight: var(font-weight--large);
     line-height: var(line-height--large);
     padding: var(padding--large);
 }
 
-.topcoat-button--large:active {
-    extend: .topcoat-button:active;
+.button--large:active {
+    extend: .button:active;
 }
 
-.topcoat-button--large:disabled {
-    extend: .topcoat-button:disabled;
+.button--large:disabled {
+    extend: .button:disabled;
 }
 
-.topcoat-button--large:hover {
-    extend: .topcoat-button:hover;
+.button--large:hover {
+    extend: .button:hover;
 }
 
-.topcoat-button--large:focus {
-    extend: .topcoat-button:focus;
+.button--large:focus {
+    extend: .button:focus;
 }
 
 /* topdoc
@@ -176,25 +176,25 @@
     - large
     - quiet
 */
-.topcoat-button--large--quiet {
-    extend: .topcoat-button--large;
+.button--large--quiet {
+    extend: .button--large;
     extend: %button--quiet;
 }
 
-.topcoat-button--large--quiet:active {
-    extend: .topcoat-button--quiet:active;
+.button--large--quiet:active {
+    extend: .button--quiet:active;
 }
 
-.topcoat-button--large--quiet:disabled {
+.button--large--quiet:disabled {
     extend: %button--disabled;
 }
 
-.topcoat-button--large--quiet:hover {
-    extend: .topcoat-button--quiet:hover;
+.button--large--quiet:hover {
+    extend: .button--quiet:hover;
 }
 
-.topcoat-button--large--quiet:focus {
-    extend: .topcoat-button:focus;
+.button--large--quiet:focus {
+    extend: .button:focus;
 }
 
 /* topdoc
@@ -215,8 +215,8 @@
     - button
     - call to action
 */
-.topcoat-button--cta {
-    extend: .topcoat-button;
+.button--cta {
+    extend: .button;
     border: var(border--cta);
     background-color: var(background-color--cta);
     box-shadow: var(box-shadow--cta);
@@ -225,21 +225,21 @@
     text-shadow: var(text-shadow--cta);
 }
 
-.topcoat-button--cta:hover {
+.button--cta:hover {
     background-color: var(background-color--cta--hover);
 }
 
-.topcoat-button--cta:focus {
-    extend: .topcoat-button:focus;
+.button--cta:focus {
+    extend: .button:focus;
 }
 
-.topcoat-button--cta:active {
+.button--cta:active {
     background-color: var(background-color--cta--down);
     box-shadow: var(box-shadow--cta--down);
 }
 
-.topcoat-button--cta:disabled {
-    extend: .topcoat-button:disabled;
+.button--cta:disabled {
+    extend: .button:disabled;
 }
 
 /* topdoc
@@ -261,27 +261,27 @@
     - large
     - call to action
 */
-.topcoat-button--large--cta {
-    extend: .topcoat-button--cta;
+.button--large--cta {
+    extend: .button--cta;
     font-size: var(font-size--large);
     font-weight: var(font-weight--large);
     line-height: var(line-height--large);
     padding: var(padding--large);
 }
 
-.topcoat-button--large--cta:hover {
-    extend: .topcoat-button--cta:hover;
+.button--large--cta:hover {
+    extend: .button--cta:hover;
 }
 
-.topcoat-button--large--cta:focus {
-    extend: .topcoat-button:focus;
+.button--large--cta:focus {
+    extend: .button:focus;
 }
 
-.topcoat-button--large--cta:active {
-    extend: .topcoat-button--cta:active;
+.button--large--cta:active {
+    extend: .button--cta:active;
 }
 
-.topcoat-button--large--cta:disabled {
-    extend: .topcoat-button:disabled;
+.button--large--cta:disabled {
+    extend: .button:disabled;
 }
 

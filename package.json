@@ -21,19 +21,18 @@
     "button"
   ],
   "author": "@dam Kristofer Joseph",
-  "license": "Apache",
+  "license": "Apache2",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "~0.4.1",
     "grunt-contrib-cssmin": "~0.6.0",
     "grunt-simple-mocha": "~0.4.0",
     "grunt-topdoc": "~0.1.3",
-    "topcoat-theme-mobile-dark": "git://github.com/topcoat/theme-mobile-dark.git",
-    "topcoat-theme-mobile-light": "git://github.com/topcoat/theme-mobile-light.git",
-    "topcoat-theme-desktop-dark": "git://github.com/topcoat/theme-desktop-dark.git",
-    "topcoat-theme-desktop-light": "git://github.com/topcoat/theme-desktop-light.git",
-    "grunt-topcoat": "git://github.com/topcoat/grunt-topcoat.git#resin",
-    "topdoc-theme": "~0.3.0"
+    "topdoc-theme": "~0.3.0",
+    "topcoat-theme-mobile-dark": "~0.1.5",
+    "topcoat-theme-desktop-dark": "~0.1.4",
+    "topcoat-theme-mobile-light": "~0.1.4",
+    "topcoat-theme-desktop-light": "~0.1.6"
   },
   "dependencies": {
     "topcoat-button-base": "~0.6.1"
