@@ -39,6 +39,7 @@
     extend: %button;
     padding: var(padding);
     font-size: var(font-size);
+    font-weight: var(font-weight);
     line-height: var(line-height);
     letter-spacing: var(letter-spacing);
     color: var(color);
@@ -97,10 +98,10 @@
 }
 
 .button--quiet:hover {
-  extend: .button:hover;
-  text-shadow: var(text-shadow);
-  border: var(border);
-  box-shadow: var(box-shadow);
+    extend: .button:hover;
+    text-shadow: var(text-shadow);
+    border: var(border);
+    box-shadow: var(box-shadow);
 }
 
 .button--quiet:focus {
@@ -108,11 +109,11 @@
 }
 
 .button--quiet:active {
-    color: var(color);
-    text-shadow: var(text-shadow);
-    background-color: var(background-color--down);
-    border: var(border);
-    box-shadow: var(box-shadow--down);
+   color: var(color);
+   text-shadow: var(text-shadow);
+   background-color: var(background-color--down);
+   border: var(border);
+   box-shadow: var(box-shadow--down);
 }
 
 /* topdoc
@@ -134,27 +135,27 @@
     - large
 */
 .button--large {
-    extend: .button;
-    font-size: var(font-size--large);
-    font-weight: var(font-weight--large);
-    line-height: var(line-height--large);
-    padding: var(padding--large);
+   extend: .button;
+   font-size: var(font-size--large);
+   font-weight: var(font-weight--large);
+   line-height: var(line-height--large);
+   padding: var(padding--large);
 }
 
 .button--large:active {
-    extend: .button:active;
+   extend: .button:active;
 }
 
 .button--large:disabled {
-    extend: .button:disabled;
+   extend: .button:disabled;
 }
 
 .button--large:hover {
-    extend: .button:hover;
+   extend: .button:hover;
 }
 
 .button--large:focus {
-    extend: .button:focus;
+   extend: .button:focus;
 }
 
 /* topdoc
@@ -177,24 +178,24 @@
     - quiet
 */
 .button--large--quiet {
-    extend: .button--large;
-    extend: %button--quiet;
+   extend: .button--large;
+   extend: %button--quiet;
 }
 
 .button--large--quiet:active {
-    extend: .button--quiet:active;
+   extend: .button--quiet:active;
 }
 
 .button--large--quiet:disabled {
-    extend: %button--disabled;
+   extend: %button--disabled;
 }
 
 .button--large--quiet:hover {
-    extend: .button--quiet:hover;
+   extend: .button--quiet:hover;
 }
 
 .button--large--quiet:focus {
-    extend: .button:focus;
+   extend: .button:focus;
 }
 
 /* topdoc
@@ -216,30 +217,30 @@
     - call to action
 */
 .button--cta {
-    extend: .button;
-    border: var(border--cta);
-    background-color: var(background-color--cta);
-    box-shadow: var(box-shadow--cta);
-    color: var(color--cta);
-    font-weight: var(font-weight--cta);
-    text-shadow: var(text-shadow--cta);
+   extend: .button;
+   border: var(border--cta);
+   background-color: var(background-color--cta);
+   box-shadow: var(box-shadow--cta);
+   color: var(color--cta);
+   font-weight: var(font-weight--cta);
+   text-shadow: var(text-shadow--cta);
 }
 
 .button--cta:hover {
-    background-color: var(background-color--cta--hover);
+   background-color: var(background-color--cta--hover);
 }
 
 .button--cta:focus {
-    extend: .button:focus;
+   extend: .button:focus;
 }
 
 .button--cta:active {
-    background-color: var(background-color--cta--down);
-    box-shadow: var(box-shadow--cta--down);
+   background-color: var(background-color--cta--down);
+   box-shadow: var(box-shadow--cta--down);
 }
 
 .button--cta:disabled {
-    extend: .button:disabled;
+   extend: .button:disabled;
 }
 
 /* topdoc
@@ -262,26 +263,26 @@
     - call to action
 */
 .button--large--cta {
-    extend: .button--cta;
-    font-size: var(font-size--large);
-    font-weight: var(font-weight--large);
-    line-height: var(line-height--large);
-    padding: var(padding--large);
+   extend: .button--cta;
+   font-size: var(font-size--large);
+   font-weight: var(font-weight--large);
+   line-height: var(line-height--large);
+   padding: var(padding--large);
 }
 
 .button--large--cta:hover {
-    extend: .button--cta:hover;
+   extend: .button--cta:hover;
 }
 
 .button--large--cta:focus {
-    extend: .button:focus;
+   extend: .button:focus;
 }
 
 .button--large--cta:active {
-    extend: .button--cta:active;
+   extend: .button--cta:active;
 }
 
 .button--large--cta:disabled {
-    extend: .button:disabled;
+   extend: .button:disabled;
 }
 
