@@ -159,6 +159,7 @@ body {
 .topcoat-button--large--cta {
   padding: 0 1.25rem;
   font-size: 16px;
+  font-weight: 400;
   line-height: 3rem;
   letter-spacing: 1px;
   color: hsla(180, 2%, 78%, 1);
