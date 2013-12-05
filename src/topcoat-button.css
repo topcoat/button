@@ -35,7 +35,7 @@
     - mobile
     - button
 */
-.button {
+%shared {
     extend: %button;
     padding: var(padding);
     font-size: var(font-size);
@@ -45,10 +45,14 @@
     color: var(color);
     text-shadow: var(text-shadow);
     vertical-align: var(vertical-align);
+    border-radius: var(border-radius);
+}
+
+.button {
+    extend: %shared;
     background-color: var(background-color);
     box-shadow: var(box-shadow);
     border: var(border);
-    border-radius: var(border-radius);
 }
 
 .button:hover {
@@ -89,7 +93,7 @@
     - quiet
 */
 .button--quiet {
-    extend: .button;
+    extend: %shared;
     extend: %button--quiet;
 }
 
@@ -134,12 +138,16 @@
     - button
     - large
 */
-.button--large {
-   extend: .button;
+%large {
    font-size: var(font-size--large);
    font-weight: var(font-weight--large);
    line-height: var(line-height--large);
    padding: var(padding--large);
+}
+
+.button--large {
+   extend: .button;
+   extend: %large;
 }
 
 .button--large:active {
@@ -178,8 +186,9 @@
     - quiet
 */
 .button--large--quiet {
-   extend: .button--large;
+   extend: %shared;
    extend: %button--quiet;
+   extend: %large;
 }
 
 .button--large--quiet:active {
