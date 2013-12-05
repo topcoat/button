@@ -35,7 +35,7 @@
     - mobile
     - button
 */
-%shared {
+%button--common {
     extend: %button;
     padding: var(padding);
     font-size: var(font-size);
@@ -49,7 +49,7 @@
 }
 
 .button {
-    extend: %shared;
+    extend: %button--common;
     background-color: var(background-color);
     box-shadow: var(box-shadow);
     border: var(border);
@@ -93,7 +93,7 @@
     - quiet
 */
 .button--quiet {
-    extend: %shared;
+    extend: %button--common;
     extend: %button--quiet;
 }
 
@@ -138,7 +138,7 @@
     - button
     - large
 */
-%large {
+%button--common-large {
    font-size: var(font-size--large);
    font-weight: var(font-weight--large);
    line-height: var(line-height--large);
@@ -147,7 +147,7 @@
 
 .button--large {
    extend: .button;
-   extend: %large;
+   extend: %button--common-large;
 }
 
 .button--large:active {
@@ -186,9 +186,9 @@
     - quiet
 */
 .button--large--quiet {
-   extend: %shared;
+   extend: %button--common;
    extend: %button--quiet;
-   extend: %large;
+   extend: %button--common-large;
 }
 
 .button--large--quiet:active {
