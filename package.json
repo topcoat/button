@@ -23,19 +23,19 @@
   "author": "@dam Kristofer Joseph",
   "license": "Apache2",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-clean": "~0.4.1",
-    "grunt-contrib-cssmin": "~0.6.2",
+    "grunt": "~1.0.1",
+    "grunt-contrib-clean": "~1.0.0",
+    "grunt-contrib-cssmin": "~1.0.2",
     "grunt-simple-mocha": "~0.4.0",
-    "topcoat-theme-mobile-dark": "~0.1.5",
-    "topcoat-theme-desktop-dark": "~0.1.4",
-    "topcoat-theme-mobile-light": "~0.1.4",
-    "topcoat-theme-desktop-light": "~0.1.6",
-    "grunt-topcoat": "~0.1.1",
+    "topcoat-theme-mobile-dark": "~1.0.0",
+    "topcoat-theme-desktop-dark": "~1.0.0",
+    "topcoat-theme-mobile-light": "~1.0.0",
+    "topcoat-theme-desktop-light": "~1.0.0",
+    "grunt-topcoat": "~0.4.1",
     "grunt-topdoc": "~0.3.0",
     "topdoc-theme": "~0.5.0"
   },
   "dependencies": {
-    "topcoat-button-base": "~0.7.0"
+    "topcoat-button-base": "~1.0.1"
   }
 }
