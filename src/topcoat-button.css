@@ -1,20 +1,3 @@
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
 @import "topcoat-button-base";
 /* topdoc
   name: Button
@@ -36,42 +19,42 @@
     - button
 */
 %button--common {
-    extend: %button;
-    padding: var(padding);
-    font-size: var(font-size);
-    font-weight: var(font-weight);
-    line-height: var(line-height);
-    letter-spacing: var(letter-spacing);
-    color: var(color);
-    text-shadow: var(text-shadow);
-    vertical-align: var(vertical-align);
-    border-radius: var(border-radius);
+  @extend: %button;
+  padding: var(--padding);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  color: var(--color);
+  text-shadow: var(--text-shadow);
+  vertical-align: var(--vertical-align);
+  border-radius: var(--border-radius);
 }
 
 .button {
-    extend: %button--common;
-    background-color: var(background-color);
-    box-shadow: var(box-shadow);
-    border: var(border);
+  @extend: %button--common;
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
+  border: var(--border);
 }
 
 .button:hover {
-    background-color: var(background-color--hover);
+  background-color: var(--background-color--hover);
 }
 
 .button:active {
-    background-color: var(background-color--down);
-    box-shadow: var(box-shadow--down);
+  background-color: var(--background-color--down);
+  box-shadow: var(--box-shadow--down);
 }
 
 .button:focus {
-    border: var(border--focus);
-    box-shadow: var(box-shadow--focus);
-    outline: 0;
+  border: var(--border--focus);
+  box-shadow: var(--box-shadow--focus);
+  outline: 0;
 }
 
 .button:disabled {
-    extend: %button--disabled;
+  @extend: %button--disabled;
 }
 
 /* topdoc
@@ -93,31 +76,34 @@
     - quiet
 */
 .button--quiet {
-    extend: %button--common;
-    extend: %button--quiet;
+  @extend: %button--common;
+  @extend: %button--quiet;
 }
 
 .button--quiet:disabled {
-    extend: .button:disabled;
+  @extend: %button--disabled;
+}
+
+.button--quiet {
+  @extend: .button:hover;
 }
 
 .button--quiet:hover {
-    extend: .button:hover;
-    text-shadow: var(text-shadow);
-    border: var(border);
-    box-shadow: var(box-shadow);
+  text-shadow: var(--text-shadow);
+  border: var(--border);
+  box-shadow: var(--box-shadow);
 }
 
-.button--quiet:focus {
-    extend: .button:focus;
+.button--quiet {
+  @extend: .button:focus;
 }
 
 .button--quiet:active {
-   color: var(color);
-   text-shadow: var(text-shadow);
-   background-color: var(background-color--down);
-   border: var(border);
-   box-shadow: var(box-shadow--down);
+  color: var(--color);
+  text-shadow: var(--text-shadow);
+  background-color: var(--background-color--down);
+  border: var(--border);
+  box-shadow: var(--box-shadow--down);
 }
 
 /* topdoc
@@ -139,31 +125,31 @@
     - large
 */
 %button--common-large {
-   font-size: var(font-size--large);
-   font-weight: var(font-weight--large);
-   line-height: var(line-height--large);
-   padding: var(padding--large);
+  font-size: var(--font-size--large);
+  font-weight: var(--font-weight--large);
+  line-height: var(--line-height--large);
+  padding: var(--padding--large);
 }
 
 .button--large {
-   extend: .button;
-   extend: %button--common-large;
+  @extend: .button;
+  @extend: %button--common-large;
 }
 
-.button--large:active {
-   extend: .button:active;
+.button--large {
+  @extend: .button:active;
 }
 
 .button--large:disabled {
-   extend: .button:disabled;
+  @extend: %button--disabled;
 }
 
-.button--large:hover {
-   extend: .button:hover;
+.button--large {
+  @extend: .button:hover;
 }
 
-.button--large:focus {
-   extend: .button:focus;
+.button--large {
+  @extend: .button:focus;
 }
 
 /* topdoc
@@ -186,25 +172,25 @@
     - quiet
 */
 .button--large--quiet {
-   extend: %button--common;
-   extend: %button--quiet;
-   extend: %button--common-large;
+  @extend: %button--common;
+  @extend: %button--quiet;
+  @extend: %button--common-large;
 }
 
-.button--large--quiet:active {
-   extend: .button--quiet:active;
+.button--large--quiet {
+  @extend: .button--quiet:active;
 }
 
 .button--large--quiet:disabled {
-   extend: %button--disabled;
+  @extend: %button--disabled;
 }
 
-.button--large--quiet:hover {
-   extend: .button--quiet:hover;
+.button--large--quiet {
+  @extend: .button--quiet:hover;
 }
 
-.button--large--quiet:focus {
-   extend: .button:focus;
+.button--large--quiet {
+  @extend: .button:focus;
 }
 
 /* topdoc
@@ -226,30 +212,30 @@
     - call to action
 */
 .button--cta {
-   extend: .button;
-   border: var(border--cta);
-   background-color: var(background-color--cta);
-   box-shadow: var(box-shadow--cta);
-   color: var(color--cta);
-   font-weight: var(font-weight--cta);
-   text-shadow: var(text-shadow--cta);
+  @extend: .button;
+  border: var(--border--cta);
+  background-color: var(--background-color--cta);
+  box-shadow: var(--box-shadow--cta);
+  color: var(--color--cta);
+  font-weight: var(--font-weight--cta);
+  text-shadow: var(--text-shadow--cta);
 }
 
 .button--cta:hover {
-   background-color: var(background-color--cta--hover);
+  background-color: var(--background-color--cta--hover);
 }
 
-.button--cta:focus {
-   extend: .button:focus;
+.button--cta {
+  @extend: .button:focus;
 }
 
 .button--cta:active {
-   background-color: var(background-color--cta--down);
-   box-shadow: var(box-shadow--cta--down);
+  background-color: var(--background-color--cta--down);
+  box-shadow: var(--box-shadow--cta--down);
 }
 
 .button--cta:disabled {
-   extend: .button:disabled;
+  @extend: %button--disabled;
 }
 
 /* topdoc
@@ -272,26 +258,25 @@
     - call to action
 */
 .button--large--cta {
-   extend: .button--cta;
-   font-size: var(font-size--large);
-   font-weight: var(font-weight--large);
-   line-height: var(line-height--large);
-   padding: var(padding--large);
+  @extend: .button--cta;
+  font-size: var(--font-size--large);
+  font-weight: var(--font-weight--large);
+  line-height: var(--line-height--large);
+  padding: var(--padding--large);
 }
 
-.button--large--cta:hover {
-   extend: .button--cta:hover;
+.button--large--cta {
+  @extend: .button--cta:hover;
 }
 
-.button--large--cta:focus {
-   extend: .button:focus;
+.button--large--cta {
+  @extend: .button:focus;
 }
 
-.button--large--cta:active {
-   extend: .button--cta:active;
+.button--large--cta {
+  @extend: .button--cta:active;
 }
 
 .button--large--cta:disabled {
-   extend: .button:disabled;
+  @extend: %button--disabled;
 }
-
