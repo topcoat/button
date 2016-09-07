@@ -11,7 +11,7 @@
     "build:desktop-light": "rsn --namespace='topcoat' -o ./css/desktop-light-button.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-light,topcoat-fonts,topcoat-root] ./src/topcoat-button.css",
     "build:mobile-dark": "rsn --namespace='topcoat' -o ./css/mobile-dark-button.css -p [topcoat-variables-shared,topcoat-variables-mobile,topcoat-variables-dark,topcoat-fonts,topcoat-root] ./src/topcoat-button.css",
     "build:mobile-light": "rsn --namespace='topcoat' -o ./css/mobile-light-button.css -p [topcoat-variables-shared,topcoat-variables-mobile,topcoat-variables-light,topcoat-fonts,topcoat-root] ./src/topcoat-button.css",
-    "build": "rm -rfv ./css/* && npm run build:desktop-dark | npm run build:desktop-light | npm run build:mobile-dark | npm run build:mobile-light",
+    "build": "rm -rfv ./css/* && npm run build:desktop-dark & npm run build:desktop-light & npm run build:mobile-dark & npm run build:mobile-light",
     "pretest": "npm run build",
     "prepublish": "npm run topdoc",
     "topdoc": "npm run build && rm -rfv ./demo/* && topdoc -s ./css -d ./demo -p 'Topcoat Button' -t './node_modules/topdoc-theme'",
