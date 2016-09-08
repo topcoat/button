@@ -14,7 +14,7 @@
     "build": "rm -rfv ./css/* && npm run build:desktop-dark && npm run build:desktop-light && npm run build:mobile-dark && npm run build:mobile-light",
     "pretest": "npm run build",
     "prepublish": "npm run topdoc",
-    "topdoc": "npm run build && rm -rfv ./demo/* && topdoc -s ./css -d ./demo -p 'Topcoat Button' -t './node_modules/topdoc-theme'",
+    "topdoc": "npm run build && rm -rfv ./demo/* && topdoc -s ./css -d ./docs -p 'Topcoat Button' -t './node_modules/topdoc-theme'",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
