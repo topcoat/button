@@ -54,7 +54,7 @@
     "topcoat-variables-mobile": "^1.1.0",
     "topcoat-variables-shared": "^1.1.0",
     "topdoc": "^0.4.0",
-    "topdoc-theme": "^0.5.0"
+    "topdoc-theme": "^0.7.0"
   },
   "config": {
     "commitizen": {
