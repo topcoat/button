@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
-    "cz-customizable": "^4.0.0",
+    "cz-customizable": "^5.0.0",
     "mocha": "^3.0.2",
     "resin": "^1.2.1",
     "semantic-release": "^4.3.5",
