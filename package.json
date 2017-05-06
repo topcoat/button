@@ -45,7 +45,7 @@
     "cz-customizable": "^4.0.0",
     "mocha": "^3.0.2",
     "resin": "^1.2.1",
-    "semantic-release": "^4.3.5",
+    "semantic-release": "^6.3.6",
     "topcoat-fonts": "^0.3.0",
     "topcoat-root": "^1.0.0",
     "topcoat-variables-dark": "^1.1.2",
