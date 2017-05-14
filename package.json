@@ -41,7 +41,7 @@
     "topcoat-button-base": "^1.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^6.4.0",
+    "autoprefixer": "^7.1.0",
     "cz-customizable": "^4.0.0",
     "mocha": "^3.0.2",
     "resin": "^1.2.1",
